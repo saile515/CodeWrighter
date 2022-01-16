@@ -23,7 +23,7 @@ const subTags = [
 	{ regex: /([^\*\s])\*\*\*(?!\S)/g, html: "$1</i></b>" },
 	{
 		regex: /(^|\s)```([a-zA-Z]{1,})(?!\S)/g,
-		html: "$1<pre><code class='language-$2'>",
+		html: "$1<pre><code class='language-$2 code'>",
 	},
 	{ regex: /(^|\s)```(?!\S)/g, html: "$1</code></pre>" },
 ];
@@ -115,6 +115,11 @@ async function convert(file) {
                     list-style-type: disc;
                     display: list-item;
                 }
+
+                .code, .code * {
+                    font-family: Consolas, 'Courier New', monospace !important;
+                }
+
             </style>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
             <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>

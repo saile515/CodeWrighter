@@ -49,6 +49,11 @@
                     list-style-type: disc;
                     display: list-item;
                 }
+
+                .code, .code * {
+                    font-family: Consolas, 'Courier New', monospace !important;
+                }
+
             </style>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
             <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
@@ -66,10 +71,18 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <br/>
 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, <b>id est laborum et dolorum fuga.</b> Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. <b>Itaque earum rerum hic tenetur a sapiente delectus,</b> ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
 <br/>
-<pre><code class='language-html'>
-    &lt;div&gt;
-        &lt;p&gt;Hello</p>
-    &lt;/div&gt;
+<pre><code class='language-javascript code'>
+    console.log("Hello World");
+<br/>
+    const test = "test";
+<br/>
+    const a = 1;
+    const b = 5;
+    const c = a + b;
+<br/>
+    function test(str) {
+        console.log(str);
+    }
 </code></pre>
 
         </body>
