@@ -21,6 +21,11 @@ const subTags = [
 	{ regex: /([^\*\s])\*\*(?!\S)/g, html: "$1</b>" },
 	{ regex: /(^|\s)\*\*\*([^\*\s])/g, html: "$1<b><i>$2" },
 	{ regex: /([^\*\s])\*\*\*(?!\S)/g, html: "$1</i></b>" },
+	{
+		regex: /(^|\s)```([a-zA-Z]{1,})(?!\S)/g,
+		html: "$1<pre><code class='language-$2'>",
+	},
+	{ regex: /(^|\s)```(?!\S)/g, html: "$1</code></pre>" },
 ];
 
 async function convert(file) {
@@ -33,6 +38,10 @@ async function convert(file) {
 
 	const tagArr = (await fileStr).split("\r\n");
 	for (let i = 0; i < tagArr.length; i++) {
+		tagArr[i] = tagArr[i]
+			.replace(/<([\D])/, "&lt;$1")
+			.replace(/([\D])>/, "$1&gt;");
+
 		for (let l = 0; l < mainTags.length; l++) {
 			if (new RegExp(`^${mainTags[l].md}\\s`).test(tagArr[i])) {
 				tagArr[i] = `<${mainTags[l].html} class="${
@@ -113,7 +122,6 @@ async function convert(file) {
         </head>
         <body>
             ${htmlStr}
-            <pre><code class="language-javascript">console.log("Hello World");</code></pre>
         </body>
         </html>`,
 		(err) => {
