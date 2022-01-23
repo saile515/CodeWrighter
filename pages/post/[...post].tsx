@@ -2,14 +2,18 @@ import type { NextPage } from "next";
 import styles from "../../styles/Post.module.css";
 import { useRouter } from "next/router";
 import { Blogpost } from "../../Components/Blogpost";
+import { Hierarchy } from "../../Components/Hierarchy";
 
 const Home: NextPage = () => {
 	const router = useRouter();
 
 	return (
-		<div className={styles.container}>
+		<div>
 			{router.query.post && (
-				<Blogpost url={`/api/post/${router.query.post[0]}`} />
+				<div className={styles.container}>
+					<Blogpost url={`/api/post/${router.query.post[0]}`} />
+					<Hierarchy />
+				</div>
 			)}
 		</div>
 	);
