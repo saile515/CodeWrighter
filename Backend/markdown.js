@@ -63,7 +63,7 @@ async function convert(file) {
 	}
 
 	fs.writeFile(
-		`${process.env.MD_OUTPUT}/file.html`,
+		`${process.env.MD_OUTPUT}/${process.argv[2]}.html`,
 		`<html lang="en">
         <head>
             <meta charset="UTF-8">
@@ -180,4 +180,4 @@ async function convert(file) {
 	);
 }
 
-convert("/test.md");
+convert(`/${process.argv[2]}.md`);
