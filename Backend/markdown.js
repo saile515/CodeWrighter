@@ -76,34 +76,43 @@ async function convert(file) {
 		            Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
                 }
 
+                body {
+                    font-size: 2.5vw;
+                }
+
                 h1 {
                     font-size: 3.5em;
                     margin: 0.438em 0;
+                    border-bottom: 2px solid #cccccc;
                 }
 
                 h2 {
-                    font-size: 2.667em;
+                    font-size: 2em;
                     margin: 0.333em 0;
                 }
 
                 h3 {
-                    font-size: 2em;
+                    font-size: 1.667em;
                     margin: 0.25em 0;
                 }
 
                 h4 {
-                    font-size: 1.667em;
+                    font-size: 1.2em;
                     margin: 0.209em 0;
                 }
 
                 h5 {
-                    font-size: 1.2em;
+                    font-size: 1em;
                     margin: 0.15em 0;
                 }
 
                 h6 {
-                    font-size: 1em;
+                    font-size: 0.833em;
                     margin: 0.125em 0;
+                }
+
+                h2 i {
+                    color: #777777;
                 }
 
                 .oli {
@@ -118,6 +127,42 @@ async function convert(file) {
 
                 .code, .code * {
                     font-family: Consolas, 'Courier New', monospace !important;
+                }
+
+                @media only screen and (max-width: 800px) {
+                    body {
+                        font-size: 5vw;
+                    }
+
+                    h1 {
+                    font-size: 2.5em;
+                    margin: 0.438em 0;
+                    }
+
+                    h2 {
+                        font-size: 1.75em;
+                        margin: 0.333em 0;
+                    }
+
+                    h3 {
+                        font-size: 1.5em;
+                        margin: 0.25em 0;
+                    }
+
+                    h4 {
+                        font-size: 1.2em;
+                        margin: 0.209em 0;
+                    }
+
+                    h5 {
+                        font-size: 1em;
+                        margin: 0.15em 0;
+                    }
+
+                    h6 {
+                        font-size: 0.833em;
+                        margin: 0.125em 0;
+                    }
                 }
 
             </style>

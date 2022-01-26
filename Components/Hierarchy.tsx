@@ -10,7 +10,6 @@ function split(str: string, tag: string) {
 	for (let i = 0; i < length; i++) {
 		titles[i + 1] = titles[i] + titles[i + 1];
 		titles.splice(i, 1);
-		if (tag == "h2") console.log(titles, i);
 	}
 
 	if (titles[0] && !titles[0].match(new RegExp(`<${tag}.*>.*</${tag}>`))) {
@@ -129,7 +128,11 @@ export class Hierarchy extends React.Component<HierarchyProps, HierarchyState> {
 				const listH3: ReactElement[] = [];
 				listH2.push(
 					<div key={a}>
-						<li className={styles.h2}>{hierarchy.body[a].title}</li>
+						<li
+							className={`${styles.h2} ${styles.hierarchyElement}`}
+						>
+							{hierarchy.body[a].title}
+						</li>
 						<ul>{listH3}</ul>
 					</div>
 				);
@@ -138,7 +141,9 @@ export class Hierarchy extends React.Component<HierarchyProps, HierarchyState> {
 					const listH4: ReactElement[] = [];
 					listH3.push(
 						<div key={b}>
-							<li className={styles.h3}>
+							<li
+								className={`${styles.h3} ${styles.hierarchyElement}`}
+							>
 								{hierarchy.body[a].body[b].title}
 							</li>
 							<ul>{listH4}</ul>
@@ -153,7 +158,9 @@ export class Hierarchy extends React.Component<HierarchyProps, HierarchyState> {
 						const listH5: ReactElement[] = [];
 						listH4.push(
 							<div key={c}>
-								<li className={styles.h4}>
+								<li
+									className={`${styles.h4} ${styles.hierarchyElement}`}
+								>
 									{hierarchy.body[a].body[b].body[c].title}
 								</li>
 								<ul>{listH5}</ul>
@@ -168,7 +175,9 @@ export class Hierarchy extends React.Component<HierarchyProps, HierarchyState> {
 							const listH6: ReactElement[] = [];
 							listH5.push(
 								<div key={d}>
-									<li className={styles.h5}>
+									<li
+										className={`${styles.h5} ${styles.hierarchyElement}`}
+									>
 										{
 											hierarchy.body[a].body[b].body[c]
 												.body[d].title
@@ -186,7 +195,10 @@ export class Hierarchy extends React.Component<HierarchyProps, HierarchyState> {
 								e++
 							) {
 								listH6.push(
-									<li key={e} className={styles.h6}>
+									<li
+										key={e}
+										className={`${styles.h6} ${styles.hierarchyElement}`}
+									>
 										{
 											hierarchy.body[a].body[b].body[c]
 												.body[d].body[e].title
@@ -202,7 +214,11 @@ export class Hierarchy extends React.Component<HierarchyProps, HierarchyState> {
 			this.setState({
 				hierarchy: (
 					<ul>
-						<li className={styles.h1}>{hierarchy.title}</li>
+						<li
+							className={`${styles.h1} ${styles.hierarchyElement}`}
+						>
+							{hierarchy.title}
+						</li>
 						<ul>{listH2}</ul>
 					</ul>
 				),
