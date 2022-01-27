@@ -39,19 +39,11 @@ async function convert(file) {
 
 	const tagArr = (await fileStr).split("\r\n");
 	for (let i = 0; i < tagArr.length; i++) {
-		tagArr[i] = tagArr[i]
-			.replace(/<([\D])/, "&lt;$1")
-			.replace(/([\D])>/, "$1&gt;");
+		tagArr[i] = tagArr[i].replace(/<([\D])/, "&lt;$1").replace(/([\D])>/, "$1&gt;");
 
 		for (let l = 0; l < mainTags.length; l++) {
 			if (new RegExp(`^${mainTags[l].md}\\s`).test(tagArr[i])) {
-				tagArr[i] = `<${
-					mainTags[l].html
-				} id=${crypto.randomUUID()} class="${
-					mainTags[l].class ? mainTags[l].class : ""
-				}"> ${tagArr[i].replace(mainTags[l].md, "")} </${
-					mainTags[l].html
-				}>`;
+				tagArr[i] = `<${mainTags[l].html} id=${crypto.randomUUID()} class="${mainTags[l].class ? mainTags[l].class : ""}"> ${tagArr[i].replace(mainTags[l].md, "")} </${mainTags[l].html}>`;
 			}
 		}
 

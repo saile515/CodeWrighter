@@ -19,14 +19,9 @@ function split(str: string, tag: string) {
 
 	const tagArr = [];
 	for (let i = 0; i < titles.length; i++) {
-		const body = titles[i]!.replace(
-			new RegExp(`<${tag}.*>.*</${tag}>(.*)`, "gm"),
-			"$1"
-		);
+		const body = titles[i]!.replace(new RegExp(`<${tag}.*>.*</${tag}>(.*)`, "gm"), "$1");
 
-		const id = titles[i]!.match(
-			new RegExp(`<${tag}.*id="([a-f0-9\-]*)".*>.*</${tag}>`, "gm")
-		)![0].replace(/.*id="([a-f0-9\-]*)".*/gm, "$1");
+		const id = titles[i]!.match(new RegExp(`<${tag}.*id="([a-f0-9\-]*)".*>.*</${tag}>`, "gm"))![0].replace(/.*id="([a-f0-9\-]*)".*/gm, "$1");
 
 		const title = titles[i]!.match(new RegExp(`<${tag}.*>.*</${tag}>`))![0]
 			.replace(/\n/g, "")
@@ -59,9 +54,7 @@ export class Hierarchy extends React.Component<HierarchyProps, HierarchyState> {
 		};
 	}
 	componentDidMount() {
-		const blogpost = document!.getElementById(
-			"blogpost"
-		)! as HTMLIFrameElement;
+		const blogpost = document!.getElementById("blogpost")! as HTMLIFrameElement;
 
 		blogpost.addEventListener("load", () => {
 			const hierarchy: HierarchyInterface = {
@@ -70,10 +63,7 @@ export class Hierarchy extends React.Component<HierarchyProps, HierarchyState> {
 				id: "",
 			};
 
-			const h1 = split(
-				blogpost.contentWindow!.document.body.innerHTML,
-				"h1"
-			);
+			const h1 = split(blogpost.contentWindow!.document.body.innerHTML, "h1");
 
 			hierarchy.title = h1[0].title;
 			hierarchy.id = h1[0].id;
@@ -112,9 +102,7 @@ export class Hierarchy extends React.Component<HierarchyProps, HierarchyState> {
 
 									if (h5[0])
 										for (let d = 0; d < h5.length; d++) {
-											hierarchy.body[a].body[b].body[
-												c
-											].body[d] = {
+											hierarchy.body[a].body[b].body[c].body[d] = {
 												title: h5[d].title,
 												body: [],
 												id: h5[d].id,
@@ -123,19 +111,12 @@ export class Hierarchy extends React.Component<HierarchyProps, HierarchyState> {
 											const h6 = split(h5[d].body, "h6");
 
 											if (h6[0])
-												for (
-													let e = 0;
-													e < h6.length;
-													e++
-												) {
-													hierarchy.body[a].body[
-														b
-													].body[c].body[d].body[e] =
-														{
-															title: h6[e].title,
-															body: [],
-															id: h6[e].id,
-														};
+												for (let e = 0; e < h6.length; e++) {
+													hierarchy.body[a].body[b].body[c].body[d].body[e] = {
+														title: h6[e].title,
+														body: [],
+														id: h6[e].id,
+													};
 												}
 										}
 								}
@@ -151,11 +132,8 @@ export class Hierarchy extends React.Component<HierarchyProps, HierarchyState> {
 						<li
 							className={`${styles.h2} ${styles.hierarchyElement}`}
 							onClick={() => {
-								blogpost.contentWindow?.document
-									.getElementById(hierarchy.body[a].id)
-									?.scrollIntoView({ behavior: "smooth" });
-							}}
-						>
+								blogpost.contentWindow?.document.getElementById(hierarchy.body[a].id)?.scrollIntoView({ behavior: "smooth" });
+							}}>
 							{hierarchy.body[a].title}
 						</li>
 						<ul>{listH3}</ul>
@@ -169,106 +147,61 @@ export class Hierarchy extends React.Component<HierarchyProps, HierarchyState> {
 							<li
 								className={`${styles.h3} ${styles.hierarchyElement}`}
 								onClick={() => {
-									blogpost.contentWindow?.document
-										.getElementById(
-											hierarchy.body[a].body[b].id
-										)
-										?.scrollIntoView({
-											behavior: "smooth",
-										});
-								}}
-							>
+									blogpost.contentWindow?.document.getElementById(hierarchy.body[a].body[b].id)?.scrollIntoView({
+										behavior: "smooth",
+									});
+								}}>
 								{hierarchy.body[a].body[b].title}
 							</li>
 							<ul>{listH4}</ul>
 						</div>
 					);
 
-					for (
-						let c = 0;
-						c < hierarchy.body[a].body[b].body.length;
-						c++
-					) {
+					for (let c = 0; c < hierarchy.body[a].body[b].body.length; c++) {
 						const listH5: ReactElement[] = [];
 						listH4.push(
 							<div key={c}>
 								<li
 									className={`${styles.h4} ${styles.hierarchyElement}`}
 									onClick={() => {
-										blogpost.contentWindow?.document
-											.getElementById(
-												hierarchy.body[a].body[b].body[
-													c
-												].id
-											)
-											?.scrollIntoView({
-												behavior: "smooth",
-											});
-									}}
-								>
+										blogpost.contentWindow?.document.getElementById(hierarchy.body[a].body[b].body[c].id)?.scrollIntoView({
+											behavior: "smooth",
+										});
+									}}>
 									{hierarchy.body[a].body[b].body[c].title}
 								</li>
 								<ul>{listH5}</ul>
 							</div>
 						);
 
-						for (
-							let d = 0;
-							d < hierarchy.body[a].body[b].body[c].body.length;
-							d++
-						) {
+						for (let d = 0; d < hierarchy.body[a].body[b].body[c].body.length; d++) {
 							const listH6: ReactElement[] = [];
 							listH5.push(
 								<div key={d}>
 									<li
 										className={`${styles.h5} ${styles.hierarchyElement}`}
 										onClick={() => {
-											blogpost.contentWindow?.document
-												.getElementById(
-													hierarchy.body[a].body[b]
-														.body[c].body[d].id
-												)
-												?.scrollIntoView({
-													behavior: "smooth",
-												});
-										}}
-									>
-										{
-											hierarchy.body[a].body[b].body[c]
-												.body[d].title
-										}
+											blogpost.contentWindow?.document.getElementById(hierarchy.body[a].body[b].body[c].body[d].id)?.scrollIntoView({
+												behavior: "smooth",
+											});
+										}}>
+										{hierarchy.body[a].body[b].body[c].body[d].title}
 									</li>
 									<ul>{listH6}</ul>
 								</div>
 							);
 
-							for (
-								let e = 0;
-								e <
-								hierarchy.body[a].body[b].body[c].body[d].body
-									.length;
-								e++
-							) {
+							for (let e = 0; e < hierarchy.body[a].body[b].body[c].body[d].body.length; e++) {
 								listH6.push(
 									<li
 										key={e}
 										className={`${styles.h6} ${styles.hierarchyElement}`}
 										onClick={() => {
-											blogpost.contentWindow?.document
-												.getElementById(
-													hierarchy.body[a].body[b]
-														.body[c].body[d].body[e]
-														.id
-												)
-												?.scrollIntoView({
-													behavior: "smooth",
-												});
-										}}
-									>
-										{
-											hierarchy.body[a].body[b].body[c]
-												.body[d].body[e].title
-										}
+											blogpost.contentWindow?.document.getElementById(hierarchy.body[a].body[b].body[c].body[d].body[e].id)?.scrollIntoView({
+												behavior: "smooth",
+											});
+										}}>
+										{hierarchy.body[a].body[b].body[c].body[d].body[e].title}
 									</li>
 								);
 							}
@@ -283,11 +216,8 @@ export class Hierarchy extends React.Component<HierarchyProps, HierarchyState> {
 						<li
 							className={`${styles.h1} ${styles.hierarchyElement}`}
 							onClick={() => {
-								blogpost.contentWindow?.document
-									.getElementById(hierarchy.id)
-									?.scrollIntoView({ behavior: "smooth" });
-							}}
-						>
+								blogpost.contentWindow?.document.getElementById(hierarchy.id)?.scrollIntoView({ behavior: "smooth" });
+							}}>
 							{hierarchy.title}
 						</li>
 						<ul>{listH2}</ul>
