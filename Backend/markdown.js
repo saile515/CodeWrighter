@@ -27,6 +27,7 @@ const subTags = [
 		html: "$1<pre><code class='language-$2 code'>",
 	},
 	{ regex: /(^|\s)```(?!\S)/g, html: "$1</code></pre>" },
+	{ regex: /\[(.*)\]\((.*)\)/g, html: "<a href='$2' target='_blank'>$1</a>" },
 ];
 
 async function convert(file) {
@@ -76,38 +77,35 @@ async function convert(file) {
                 }
 
                 h1 {
-                    font-size: 3em;
-                    margin: 0.438em 0;
+                    font-weight: 800;
+                    font-size: 3.8rem;
+                    margin: 0.438rem 0;
                     border-bottom: 2px solid #cccccc;
                 }
 
                 h2 {
-                    font-size: 2em;
-                    margin: 0.333em 0;
+                    font-size: 2.875rem;
+                    margin: 0.333rem 0;
                 }
 
                 h3 {
-                    font-size: 1.667em;
-                    margin: 0.25em 0;
+                    font-size: 2.5rem;
+                    margin: 0.25rem 0;
                 }
 
                 h4 {
-                    font-size: 1.2em;
-                    margin: 0.209em 0;
+                    font-size: 2.125rem;
+                    margin: 0.209rem 0;
                 }
 
                 h5 {
-                    font-size: 1em;
-                    margin: 0.15em 0;
+                    font-size: 1.75rem;
+                    margin: 0.15rem 0;
                 }
 
                 h6 {
-                    font-size: 0.833em;
-                    margin: 0.125em 0;
-                }
-
-                h2 i {
-                    color: #777777;
+                    font-size: 1.5rem;
+                    margin: 0.125rem 0;
                 }
 
                 .oli {
@@ -122,6 +120,10 @@ async function convert(file) {
 
                 .code, .code * {
                     font-family: Consolas, 'Courier New', monospace !important;
+                }
+
+                a {
+                    text-decoration: none;
                 }
 
                 @media only screen and (max-width: 800px) {

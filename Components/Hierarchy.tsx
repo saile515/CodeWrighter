@@ -130,7 +130,7 @@ export class Hierarchy extends React.Component<HierarchyProps, HierarchyState> {
 				listH2.push(
 					<div key={a}>
 						<li
-							className={`${styles.h2} ${styles.hierarchyElement}`}
+							className={`${styles.h2} ${styles.hierarchyElement} mx-[0.5rem] my-1 text-2xl`}
 							onClick={() => {
 								blogpost.contentWindow?.document.getElementById(hierarchy.body[a].id)?.scrollIntoView({ behavior: "smooth" });
 							}}>
@@ -145,7 +145,7 @@ export class Hierarchy extends React.Component<HierarchyProps, HierarchyState> {
 					listH3.push(
 						<div key={b}>
 							<li
-								className={`${styles.h3} ${styles.hierarchyElement}`}
+								className={`${styles.h3} ${styles.hierarchyElement} mx-[1rem] my-1 text-xl`}
 								onClick={() => {
 									blogpost.contentWindow?.document.getElementById(hierarchy.body[a].body[b].id)?.scrollIntoView({
 										behavior: "smooth",
@@ -162,7 +162,7 @@ export class Hierarchy extends React.Component<HierarchyProps, HierarchyState> {
 						listH4.push(
 							<div key={c}>
 								<li
-									className={`${styles.h4} ${styles.hierarchyElement}`}
+									className={`${styles.h4} ${styles.hierarchyElement} mx-[1.5rem] my-1 text-lg`}
 									onClick={() => {
 										blogpost.contentWindow?.document.getElementById(hierarchy.body[a].body[b].body[c].id)?.scrollIntoView({
 											behavior: "smooth",
@@ -179,7 +179,7 @@ export class Hierarchy extends React.Component<HierarchyProps, HierarchyState> {
 							listH5.push(
 								<div key={d}>
 									<li
-										className={`${styles.h5} ${styles.hierarchyElement}`}
+										className={`${styles.h5} ${styles.hierarchyElement} mx-[2rem] my-1 text-base`}
 										onClick={() => {
 											blogpost.contentWindow?.document.getElementById(hierarchy.body[a].body[b].body[c].body[d].id)?.scrollIntoView({
 												behavior: "smooth",
@@ -195,7 +195,7 @@ export class Hierarchy extends React.Component<HierarchyProps, HierarchyState> {
 								listH6.push(
 									<li
 										key={e}
-										className={`${styles.h6} ${styles.hierarchyElement}`}
+										className={`${styles.h6} ${styles.hierarchyElement} mx-[2.5rem] my-1 text-sm`}
 										onClick={() => {
 											blogpost.contentWindow?.document.getElementById(hierarchy.body[a].body[b].body[c].body[d].body[e].id)?.scrollIntoView({
 												behavior: "smooth",
@@ -214,7 +214,7 @@ export class Hierarchy extends React.Component<HierarchyProps, HierarchyState> {
 				hierarchy: (
 					<ul>
 						<li
-							className={`${styles.h1} ${styles.hierarchyElement}`}
+							className={`${styles.h1} ${styles.hierarchyElement} font-extrabold mx-[0rem] my-1 text-3xl`}
 							onClick={() => {
 								blogpost.contentWindow?.document.getElementById(hierarchy.id)?.scrollIntoView({ behavior: "smooth" });
 							}}>

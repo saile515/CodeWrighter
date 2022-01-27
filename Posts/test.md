@@ -1,4 +1,4 @@
-# Lorem ipsum dolor sit amet
+# How to be more productive as a developer
 
 ## Information
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -64,3 +64,11 @@ eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere poss
 Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae
 non recusandae. **Itaque earum rerum hic tenetur a sapiente delectus,** ut aut reiciendis voluptatibus maiores alias consequatur aut 
 perferendis doloribus asperiores repellat.
+
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+
+[Tailwind](https://tailwindcss.com/)

@@ -10,17 +10,18 @@
 }
 
 .hierarchy {
-	margin-top: 15em;
+	margin-top: 15rem;
 	align-self: start;
 	grid-column-start: 3;
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
-	padding: 10px;
+	padding: 0.5rem;
+	border-left: 2px solid #cccccc;
 }
 
 .hierarchyElement {
-	padding: 0px 4px;
+	padding: 0px 0.5rem;
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
@@ -32,38 +33,7 @@
 .hierarchyElement:hover {
 	cursor: pointer;
 	color: #0000ffbb;
-	padding-left: 8px;
-}
-
-.h1 {
-	font-size: 22px;
-	margin: 1px 2px;
-	font-weight: 800;
-}
-
-.h2 {
-	font-size: 20px;
-	margin: 1px 10px;
-}
-
-.h3 {
-	font-size: 18px;
-	margin: 1px 18px;
-}
-
-.h4 {
-	font-size: 16px;
-	margin: 1px 26px;
-}
-
-.h5 {
-	font-size: 14px;
-	margin: 1px 34px;
-}
-
-.h6 {
-	font-size: 12px;
-	margin: 1px 42px;
+	padding-left: 1rem;
 }
 
 @media only screen and (max-width: 800px) {
