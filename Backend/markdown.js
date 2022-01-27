@@ -84,7 +84,7 @@ async function convert(file) {
                 }
 
                 h1 {
-                    font-size: 3.5em;
+                    font-size: 3em;
                     margin: 0.438em 0;
                     border-bottom: 2px solid #cccccc;
                 }
