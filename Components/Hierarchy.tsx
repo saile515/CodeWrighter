@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { ReactElement } from "react";
 import styles from "../styles/Post.module.css";
 
@@ -22,11 +23,16 @@ function split(str: string, tag: string) {
 			new RegExp(`<${tag}.*>.*</${tag}>(.*)`, "gm"),
 			"$1"
 		);
+
+		const id = titles[i]!.match(
+			new RegExp(`<${tag}.*id="([a-f0-9\-]*)".*>.*</${tag}>`, "gm")
+		)![0].replace(/.*id="([a-f0-9\-]*)".*/gm, "$1");
+
 		const title = titles[i]!.match(new RegExp(`<${tag}.*>.*</${tag}>`))![0]
 			.replace(/\n/g, "")
 			.replace(new RegExp(`<${tag}.*>(.*)</${tag}>`, "gm"), "$1");
 
-		tagArr.push({ title: title, body: body });
+		tagArr.push({ title: title, body: body, id: id });
 	}
 
 	return tagArr;
@@ -34,6 +40,7 @@ function split(str: string, tag: string) {
 
 interface HierarchyInterface {
 	title: string;
+	id: string;
 	body: HierarchyInterface[];
 }
 
@@ -57,7 +64,11 @@ export class Hierarchy extends React.Component<HierarchyProps, HierarchyState> {
 		)! as HTMLIFrameElement;
 
 		blogpost.addEventListener("load", () => {
-			const hierarchy: HierarchyInterface = { title: "", body: [] };
+			const hierarchy: HierarchyInterface = {
+				title: "",
+				body: [],
+				id: "",
+			};
 
 			const h1 = split(
 				blogpost.contentWindow!.document.body.innerHTML,
@@ -65,12 +76,17 @@ export class Hierarchy extends React.Component<HierarchyProps, HierarchyState> {
 			);
 
 			hierarchy.title = h1[0].title;
+			hierarchy.id = h1[0].id;
 
 			const h2 = split(h1[0].body, "h2");
 
 			if (h2[0])
 				for (let a = 0; a < h2.length; a++) {
-					hierarchy.body[a] = { title: h2[a].title, body: [] };
+					hierarchy.body[a] = {
+						title: h2[a].title,
+						body: [],
+						id: h2[a].id,
+					};
 
 					const h3 = split(h2[a].body, "h3");
 
@@ -79,6 +95,7 @@ export class Hierarchy extends React.Component<HierarchyProps, HierarchyState> {
 							hierarchy.body[a].body[b] = {
 								title: h3[b].title,
 								body: [],
+								id: h3[b].id,
 							};
 
 							const h4 = split(h3[b].body, "h4");
@@ -88,6 +105,7 @@ export class Hierarchy extends React.Component<HierarchyProps, HierarchyState> {
 									hierarchy.body[a].body[b].body[c] = {
 										title: h4[c].title,
 										body: [],
+										id: h4[c].id,
 									};
 
 									const h5 = split(h4[c].body, "h5");
@@ -99,6 +117,7 @@ export class Hierarchy extends React.Component<HierarchyProps, HierarchyState> {
 											].body[d] = {
 												title: h5[d].title,
 												body: [],
+												id: h5[d].id,
 											};
 
 											const h6 = split(h5[d].body, "h6");
@@ -115,6 +134,7 @@ export class Hierarchy extends React.Component<HierarchyProps, HierarchyState> {
 														{
 															title: h6[e].title,
 															body: [],
+															id: h6[e].id,
 														};
 												}
 										}
@@ -130,6 +150,11 @@ export class Hierarchy extends React.Component<HierarchyProps, HierarchyState> {
 					<div key={a}>
 						<li
 							className={`${styles.h2} ${styles.hierarchyElement}`}
+							onClick={() => {
+								blogpost.contentWindow?.document
+									.getElementById(hierarchy.body[a].id)
+									?.scrollIntoView({ behavior: "smooth" });
+							}}
 						>
 							{hierarchy.body[a].title}
 						</li>
@@ -143,6 +168,15 @@ export class Hierarchy extends React.Component<HierarchyProps, HierarchyState> {
 						<div key={b}>
 							<li
 								className={`${styles.h3} ${styles.hierarchyElement}`}
+								onClick={() => {
+									blogpost.contentWindow?.document
+										.getElementById(
+											hierarchy.body[a].body[b].id
+										)
+										?.scrollIntoView({
+											behavior: "smooth",
+										});
+								}}
 							>
 								{hierarchy.body[a].body[b].title}
 							</li>
@@ -160,6 +194,17 @@ export class Hierarchy extends React.Component<HierarchyProps, HierarchyState> {
 							<div key={c}>
 								<li
 									className={`${styles.h4} ${styles.hierarchyElement}`}
+									onClick={() => {
+										blogpost.contentWindow?.document
+											.getElementById(
+												hierarchy.body[a].body[b].body[
+													c
+												].id
+											)
+											?.scrollIntoView({
+												behavior: "smooth",
+											});
+									}}
 								>
 									{hierarchy.body[a].body[b].body[c].title}
 								</li>
@@ -177,6 +222,16 @@ export class Hierarchy extends React.Component<HierarchyProps, HierarchyState> {
 								<div key={d}>
 									<li
 										className={`${styles.h5} ${styles.hierarchyElement}`}
+										onClick={() => {
+											blogpost.contentWindow?.document
+												.getElementById(
+													hierarchy.body[a].body[b]
+														.body[c].body[d].id
+												)
+												?.scrollIntoView({
+													behavior: "smooth",
+												});
+										}}
 									>
 										{
 											hierarchy.body[a].body[b].body[c]
@@ -198,6 +253,17 @@ export class Hierarchy extends React.Component<HierarchyProps, HierarchyState> {
 									<li
 										key={e}
 										className={`${styles.h6} ${styles.hierarchyElement}`}
+										onClick={() => {
+											blogpost.contentWindow?.document
+												.getElementById(
+													hierarchy.body[a].body[b]
+														.body[c].body[d].body[e]
+														.id
+												)
+												?.scrollIntoView({
+													behavior: "smooth",
+												});
+										}}
 									>
 										{
 											hierarchy.body[a].body[b].body[c]
@@ -216,6 +282,11 @@ export class Hierarchy extends React.Component<HierarchyProps, HierarchyState> {
 					<ul>
 						<li
 							className={`${styles.h1} ${styles.hierarchyElement}`}
+							onClick={() => {
+								blogpost.contentWindow?.document
+									.getElementById(hierarchy.id)
+									?.scrollIntoView({ behavior: "smooth" });
+							}}
 						>
 							{hierarchy.title}
 						</li>

@@ -1,4 +1,5 @@
 const fs = require("fs");
+const crypto = require("crypto");
 require("dotenv").config();
 
 const mainTags = [
@@ -44,7 +45,9 @@ async function convert(file) {
 
 		for (let l = 0; l < mainTags.length; l++) {
 			if (new RegExp(`^${mainTags[l].md}\\s`).test(tagArr[i])) {
-				tagArr[i] = `<${mainTags[l].html} class="${
+				tagArr[i] = `<${
+					mainTags[l].html
+				} id=${crypto.randomUUID()} class="${
 					mainTags[l].class ? mainTags[l].class : ""
 				}"> ${tagArr[i].replace(mainTags[l].md, "")} </${
 					mainTags[l].html
