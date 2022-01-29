@@ -15,21 +15,20 @@ export class Blogpost extends React.Component<Props, State> {
 		this.state = {
 			height: "0px",
 		};
+
+		this.setHeight = this.setHeight.bind(this);
+
+		window.addEventListener("resize", this.setHeight);
+	}
+
+	setHeight() {
+		const obj = document.getElementById("blogpost") as HTMLIFrameElement;
+		this.setState({
+			height: obj.contentWindow!.document.body.scrollHeight + 80 + "px",
+		});
 	}
 
 	render() {
-		return (
-			<iframe
-				id="blogpost"
-				className={styles.post}
-				height={this.state.height}
-				src={this.props.url}
-				onLoad={() => {
-					const obj = document.getElementById("blogpost") as HTMLIFrameElement;
-					this.setState({
-						height: obj.contentWindow!.document.body.scrollHeight + 80 + "px",
-					});
-				}}></iframe>
-		);
+		return <iframe id="blogpost" className={styles.post} height={this.state.height} src={this.props.url} onLoad={this.setHeight}></iframe>;
 	}
 }

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React, { ReactElement } from "react";
 import styles from "../styles/Post.module.css";
 
