@@ -10,7 +10,7 @@ interface State {
 }
 
 export class Blogpost extends React.Component<Props, State> {
-	constructor(props: Props, context: any) {
+	constructor(props: Props) {
 		super(props);
 		this.state = {
 			height: "0px",

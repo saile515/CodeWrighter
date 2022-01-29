@@ -15,7 +15,7 @@
 	grid-column-start: 3;
 	position: -webkit-sticky;
 	position: sticky;
-	top: 0;
+	top: 0.5rem;
 	padding: 0.5rem;
 	border-left: 2px solid #cccccc;
 }
