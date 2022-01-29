@@ -69,10 +69,10 @@ async function convert(file) {
             <link rel="stylesheet" href="/post.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
             <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
-            <script>hljs.highlightAll();</script>
         </head>
         <body>
             ${htmlStr}
+            <script src="/post.js"></script>
         </body>
         </html>`,
 		(err) => {
