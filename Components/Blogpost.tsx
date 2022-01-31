@@ -17,7 +17,9 @@ export class Blogpost extends React.Component<Props, State> {
 		};
 
 		this.setHeight = this.setHeight.bind(this);
+	}
 
+	componentDidMount() {
 		window.addEventListener("resize", this.setHeight);
 	}
 

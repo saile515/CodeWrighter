@@ -3,38 +3,38 @@
 }
 
 body {
-	font-size: 0.2rem;
+	font-size: 1rem;
 }
 
 h1 {
 	font-weight: 800;
-	font-size: 3.8rem;
+	font-size: 2.8rem;
 	margin: 0.438rem 0;
 	border-bottom: 2px solid #cccccc;
 }
 
 h2 {
-	font-size: 2.875rem;
+	font-size: 2.2rem;
 	margin: 0.333rem 0;
 }
 
 h3 {
-	font-size: 2.5rem;
+	font-size: 1.9rem;
 	margin: 0.25rem 0;
 }
 
 h4 {
-	font-size: 2.125rem;
+	font-size: 1.7rem;
 	margin: 0.209rem 0;
 }
 
 h5 {
-	font-size: 1.75rem;
+	font-size: 1.5rem;
 	margin: 0.15rem 0;
 }
 
 h6 {
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	margin: 0.125rem 0;
 }
 

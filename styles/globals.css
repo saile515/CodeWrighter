@@ -2,12 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+	font-size: 1vw;
+}
+
 html,
 body {
 	padding: 0;
 	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -17,4 +20,10 @@ a {
 
 * {
 	box-sizing: border-box;
+}
+
+@media only screen and (max-width: 800px) and (max-aspect-ratio: 8/10) {
+	html {
+		font-size: 3vw;
+	}
 }
