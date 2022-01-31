@@ -26,7 +26,7 @@ export class Blogpost extends React.Component<Props, State> {
 	setHeight() {
 		const obj = document.getElementById("blogpost") as HTMLIFrameElement;
 		this.setState({
-			height: obj.contentWindow!.document.body.scrollHeight + 80 + "px",
+			height: obj.contentWindow!.document.body.getBoundingClientRect().height + 80 + "px",
 		});
 	}
 
