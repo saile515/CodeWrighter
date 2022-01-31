@@ -25,15 +25,15 @@ export class Metadata extends React.Component<Props, State> {
 				<ul>
 					<li className={styles.metadataListItem}>
 						<span className={styles.listTopic}>Author: </span>
-						{"Elias Jörgensen"}
+						<span>{"Elias Jörgensen"}</span>
 					</li>
 					<li className={styles.metadataListItem}>
 						<span className={styles.listTopic}>Date: </span>
-						{"31st of January, 2022"}
+						<span>{"31st of January, 2022"}</span>
 					</li>
 					<li className={styles.metadataListItem}>
 						<span className={styles.listTopic}>Edited: </span>
-						{"7th of February, 2022"}
+						<span>{"7th of February, 2022"}</span>
 					</li>
 				</ul>
 			</div>

@@ -17,7 +17,7 @@ function media() {
 		for (let i = 0; i < h5.length; i++) h5[i].style.fontSize = "1rem";
 		for (let i = 0; i < h6.length; i++) h6[i].style.fontSize = "0.833rem";
 	} else {
-		document.body.style.fontSize = "2.5vw";
+		document.body.style.fontSize = "2rem";
 
 		for (let i = 0; i < h1.length; i++) h1[i].style.fontSize = "3.8rem";
 		for (let i = 0; i < h2.length; i++) h2[i].style.fontSize = "2.875rem";
