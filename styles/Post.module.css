@@ -1,18 +1,20 @@
 .container {
 	display: grid;
 	grid-template-columns: 2fr 5fr minmax(0, 2fr);
+	grid-template-rows: 15rem minmax(0, 1fr) 1fr;
 	width: 100%;
 }
 
 .post {
 	grid-column-start: 2;
+	grid-row: 1 / 4;
 	width: 100%;
 }
 
 .hierarchy {
-	margin-top: 15rem;
 	align-self: start;
 	grid-column-start: 3;
+	grid-row: 2 / 3;
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0.5rem;
@@ -36,12 +38,37 @@
 	padding-left: 1rem;
 }
 
+.metadata {
+	padding: 0.5rem;
+	grid-column: 3;
+	grid-row: 1;
+}
+
+.metadataListItem {
+	font-weight: lighter;
+	font-size: 1.3rem;
+	text-align: right;
+}
+
+.listTopic {
+	font-weight: bold;
+	text-align: left;
+	float: left;
+}
+
 @media only screen and (max-width: 800px) {
 	.container {
 		grid-template-columns: 1fr 20fr 1fr;
+		grid-template-rows: 1fr minmax(0, 15rem);
 	}
 
 	.hierarchy {
 		display: none;
+	}
+
+	.metadata {
+		grid-column: 2;
+		grid-row: 2;
+		border-top: 2px solid #cccccc;
 	}
 }

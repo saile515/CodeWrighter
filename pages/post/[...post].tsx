@@ -13,7 +13,7 @@ const Home: NextPage = () => {
 			{router.query.post && (
 				<div className={styles.container}>
 					<Blogpost url={`/api/post/${router.query.post[0]}`} />
-					{/* <Metadata url={`/api/metadata/${router.query.post[0]}`} /> */}
+					<Metadata url={`/api/metadata/${router.query.post[0]}`} />
 					<Hierarchy />
 				</div>
 			)}

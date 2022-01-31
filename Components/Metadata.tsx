@@ -20,6 +20,23 @@ export class Metadata extends React.Component<Props, State> {
 	}
 
 	render() {
-		return <div className={styles.metadata}>Hello</div>;
+		return (
+			<div className={styles.metadata}>
+				<ul>
+					<li className={styles.metadataListItem}>
+						<span className={styles.listTopic}>Author: </span>
+						{"Elias Jörgensen"}
+					</li>
+					<li className={styles.metadataListItem}>
+						<span className={styles.listTopic}>Date: </span>
+						{"31st of January, 2022"}
+					</li>
+					<li className={styles.metadataListItem}>
+						<span className={styles.listTopic}>Edited: </span>
+						{"7th of February, 2022"}
+					</li>
+				</ul>
+			</div>
+		);
 	}
 }
