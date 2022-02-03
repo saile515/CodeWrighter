@@ -5,11 +5,12 @@
 		"dev": "next dev -- -p 8080",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint",
-		"render": "node Backend/markdown.js"
+		"lint": "next lint"
 	},
 	"dependencies": {
+		"@types/marked": "^4.0.2",
 		"dotenv": "^11.0.0",
+		"marked": "^4.0.12",
 		"next": "^12.0.9",
 		"react": "17.0.2",
 		"react-dom": "17.0.2"
