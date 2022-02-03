@@ -4,6 +4,7 @@ const { marked } = require("marked");
 require("dotenv").config();
 
 async function createPost(post) {
+	// Read post file
 	let file = new Promise((resolve, reject) => {
 		fs.readFile(`${process.env.MD_INPUT}/${post}.md`, "utf8", (err, data) => {
 			if (err) throw err;
@@ -11,6 +12,7 @@ async function createPost(post) {
 		});
 	});
 
+	// Read data file
 	const database = new Promise((resolve, reject) => {
 		fs.readFile(`./Database/posts.json`, "utf8", (err, data) => {
 			if (err) throw err;
@@ -18,9 +20,12 @@ async function createPost(post) {
 		});
 	});
 
+	// Initialize uuid
 	let uuid;
 
+	// Check if post exists by looking for metadata
 	if (/^---\nuuid:\s([a-zA-Z0-9\-]*)\n---\n/g.test(await file)) {
+		// If post exists, edit the file, and push the date
 		uuid = (await file).replace(/^---\nuuid:\s([a-zA-Z0-9\-]*)\n---\n[\s\S]*/g, "$1");
 		file = (await file).replace(/^---\nuuid:\s([a-zA-Z0-9\-]*)\n---\n/g, "");
 		(await database).posts
@@ -32,8 +37,9 @@ async function createPost(post) {
 			if (err) throw err;
 		});
 	} else {
+		// If post does not exist, create post
 		uuid = crypto.randomUUID();
-		(await database).posts.push({ id: uuid, data: new Date(), edits: [] });
+		(await database).posts.push({ id: uuid, date: new Date(), edits: [] });
 		fs.writeFile("./Database/posts.json", JSON.stringify(await database, null, 4), null, (err) => {
 			if (err) throw err;
 		});
@@ -44,6 +50,7 @@ async function createPost(post) {
 
 	const html = marked.parse(await file);
 
+	// Write data to txt file
 	fs.writeFile(`${process.env.MD_OUTPUT}/${uuid}.txt`, html, null, (err) => {
 		if (err) throw err;
 	});
