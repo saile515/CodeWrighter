@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import PostTile from "./PostTile";
+import styles from "../styles/PostBrowser.module.css";
 
 export interface PostData {
 	id: string;
@@ -20,7 +21,7 @@ export default function PostBrowser() {
 	}, []);
 
 	return (
-		<div>
+		<div className={`${styles.container} bg-gray-900`}>
 			{posts?.map((post: PostData) => (
 				<PostTile key={post.id} id={post.id} date={post.date} edits={post.edits} name={post.name} />
 			))}

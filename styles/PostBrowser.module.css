@@ -1,0 +1,7 @@
+.container {
+	grid-column: 2 / 4;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: repeat(auto-fill, 15rem);
+	height: 100%;
+}
