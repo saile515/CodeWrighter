@@ -39,7 +39,7 @@ async function createPost(post) {
 	} else {
 		// If post does not exist, create post
 		uuid = crypto.randomUUID();
-		(await database).posts.push({ id: uuid, date: new Date(), edits: [] });
+		(await database).posts.push({ id: uuid, date: new Date(), edits: [], name: (await file).match(/^#\s.*/g)[0].replace("# ", "") });
 		fs.writeFile("./Database/posts.json", JSON.stringify(await database, null, 4), null, (err) => {
 			if (err) throw err;
 		});
