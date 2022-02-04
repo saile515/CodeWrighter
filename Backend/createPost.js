@@ -56,4 +56,4 @@ async function createPost(post) {
 	});
 }
 
-createPost("test");
+createPost(`/${process.argv[2]}`);

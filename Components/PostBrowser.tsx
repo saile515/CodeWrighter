@@ -19,5 +19,11 @@ export default function PostBrowser() {
 			});
 	}, []);
 
-	return <div>{posts && <PostTile id={posts[0].id} date={posts[0].date} edits={posts[0].edits} name={posts[0].name} />}</div>;
+	return (
+		<div>
+			{posts?.map((post: PostData) => (
+				<PostTile key={post.id} id={post.id} date={post.date} edits={post.edits} name={post.name} />
+			))}
+		</div>
+	);
 }
