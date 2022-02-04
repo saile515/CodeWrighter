@@ -21,7 +21,7 @@ export default function PostBrowser() {
 	}, []);
 
 	return (
-		<div className={`${styles.container} bg-gray-900`}>
+		<div className={`${styles.container} bg-slate-900`}>
 			{posts?.map((post: PostData) => (
 				<PostTile key={post.id} id={post.id} date={post.date} edits={post.edits} name={post.name} />
 			))}

@@ -1,3 +1,3 @@
 export default function SideMenu() {
-	return <div className=" bg-gray-900 border-r-2 border-gray-800"></div>;
+	return <div className=" bg-slate-900 border-r-2 border border-solid border-slate-800"></div>;
 }

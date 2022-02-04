@@ -39,7 +39,7 @@ async function createPost(post) {
 	} else {
 		// If post does not exist, create post
 		uuid = crypto.randomUUID();
-		(await database).posts.push({ id: uuid, date: new Date(), edits: [], name: (await file).match(/^#\s.*/g)[0].replace("# ", "") });
+		(await database).posts.push({ id: uuid, date: new Date(), edits: [], name: (await file).match(/^#\s.*/g)[0].replace("# ", ""), author: process.env.AUTHOR });
 		fs.writeFile("./Database/posts.json", JSON.stringify(await database, null, 4), null, (err) => {
 			if (err) throw err;
 		});
@@ -48,7 +48,7 @@ async function createPost(post) {
 		});
 	}
 
-	const html = marked.parse(await file);
+	const html = marked.parse(await file, { headerIds: false });
 
 	// Write data to txt file
 	fs.writeFile(`${process.env.MD_OUTPUT}/${uuid}.txt`, html, null, (err) => {
