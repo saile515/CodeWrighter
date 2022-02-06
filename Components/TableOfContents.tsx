@@ -1,4 +1,4 @@
-import { ReactElement, useEffect, useRef, useState } from "react";
+import { Dispatch, MutableRefObject, ReactElement, SetStateAction, useEffect, useRef, useState } from "react";
 import styles from "../styles/TableOfContents.module.css";
 
 interface HeadingInterface {
@@ -44,30 +44,30 @@ function getHeadings() {
 	return structure;
 }
 
-function useIntersectionObserver(setActiveId: any, ready: boolean) {
+function useIntersectionObserver(setActiveId: Dispatch<SetStateAction<string>>, ready: boolean) {
 	const headingElementsRef: any = useRef({});
 	useEffect(() => {
 		function callback(headings: IntersectionObserverEntry[]) {
-			headingElementsRef.current = headings.reduce((map: any, headingElement) => {
+			headingElementsRef.current = headings.reduce((map: any, headingElement: IntersectionObserverEntry) => {
 				map[headingElement.target.id] = headingElement;
 				return map;
 			}, headingElementsRef.current);
 
-			const visibleHeadings: any = [];
+			const visibleHeadings: IntersectionObserverEntry[] = [];
 			Object.keys(headingElementsRef.current).forEach((key) => {
 				const headingElement = headingElementsRef.current[key];
 				if (headingElement.isIntersecting) visibleHeadings.push(headingElement);
 			});
 
-			function getIndexFromId(id: any) {
+			function getIndexFromId(id: string) {
 				headingElements.findIndex((heading) => heading.id === id);
 			}
 
 			if (visibleHeadings.length === 1) {
 				setActiveId(visibleHeadings[0].target.id);
 			} else if (visibleHeadings.length > 1) {
-				const sortedVisibleHeadings = visibleHeadings.sort((a: any, b: any) => {
-					return getIndexFromId(a.target.id) > getIndexFromId(b.target.id);
+				const sortedVisibleHeadings = visibleHeadings.sort((a: IntersectionObserverEntry, b: IntersectionObserverEntry) => {
+					return +(getIndexFromId(a.target.id) > getIndexFromId(b.target.id));
 				});
 				setActiveId(sortedVisibleHeadings[0].target.id);
 			}
@@ -108,7 +108,7 @@ function createTableOfContents(structure: HeadingInterface[], depth: number, act
 }
 
 export default function TableOfContents(props: { ready: boolean }) {
-	const [activeId, setActiveId] = useState();
+	const [activeId, setActiveId] = useState<string>("");
 	const [structure, setStructure] = useState<HeadingInterface[]>();
 	useIntersectionObserver(setActiveId, props.ready);
 
