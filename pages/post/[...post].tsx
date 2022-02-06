@@ -9,7 +9,9 @@ import { useEffect, useState } from "react";
 const Home: NextPage = () => {
 	const router = useRouter();
 	const [content, setContent] = useState("");
+	const [metadata, setMetadata] = useState({ id: "", name: "", date: new Date(), edits: [] });
 	const [contentReady, setContentReady] = useState(false);
+	const [metaReady, setMetaReady] = useState(false);
 
 	useEffect(() => {
 		if (!router.isReady) return;
@@ -19,13 +21,19 @@ const Home: NextPage = () => {
 				setContent(data);
 				setContentReady(true);
 			});
+		fetch(`/api/metadata/${router.query.post![0]}`)
+			.then((data) => data.json())
+			.then((data) => {
+				setMetadata(data);
+				setMetaReady(true);
+			});
 	}, [router.isReady]);
 
 	return (
 		<div className={`${styles.container}`}>
 			<SideMenu />
-			<Blogpost content={content} />
-			<TableOfContents ready={contentReady} />
+			<Blogpost content={content} metadata={metadata} />
+			<TableOfContents ready={contentReady && metaReady} />
 		</div>
 	);
 };

@@ -48,7 +48,8 @@ async function createPost(post) {
 		});
 	}
 
-	const html = marked.parse(await file);
+	file = (await file).replace(/^#\s.*/gm, "");
+	const html = marked.parse(file);
 
 	// Write data to txt file
 	fs.writeFile(`${process.env.MD_OUTPUT}/${uuid}.txt`, html, null, (err) => {

@@ -39,8 +39,8 @@ function createHeadingStructure(headings: HTMLHeadingElement[], depth: number) {
 }
 
 function getHeadings() {
-	const headings = Array.from(document.querySelectorAll("h1, h2, h3, h4, h5, h6"));
-	const structure = createHeadingStructure(headings as HTMLHeadingElement[], 1);
+	const headings = Array.from(document.querySelectorAll("h2, h3, h4, h5, h6"));
+	const structure = createHeadingStructure(headings as HTMLHeadingElement[], 2);
 	return structure;
 }
 
@@ -77,7 +77,7 @@ function useIntersectionObserver(setActiveId: Dispatch<SetStateAction<string>>, 
 			rootMargin: "0px 0px -40% 0px",
 		});
 
-		const headingElements = Array.from(document.querySelectorAll("h2, h3"));
+		const headingElements = Array.from(document.querySelectorAll("h2, h3, h4, h5, h6"));
 
 		headingElements.forEach((element) => observer.observe(element));
 
@@ -91,7 +91,7 @@ function createTableOfContents(structure: HeadingInterface[], depth: number, act
 		headings.push(
 			<li key={heading.id}>
 				<a
-					className={` transition-[padding] duration-300 hover:pl-2 ${depth == 1 ? "font-bold text-xl text-white" : `${heading.id == active ? "text-white" : "text-slate-400"}`}`}
+					className={` transition-[padding] duration-300 hover:pl-2 ${heading.id == active ? "text-white" : "text-slate-400"}`}
 					href={`#${heading.id}`}
 					onClick={(event) => {
 						event.preventDefault();
@@ -113,7 +113,8 @@ export default function TableOfContents(props: { ready: boolean }) {
 	useIntersectionObserver(setActiveId, props.ready);
 
 	useEffect(() => {
+		if (!props.ready) return;
 		setStructure(getHeadings());
 	}, [props.ready]);
-	return <nav className={`${styles.container} bg-slate-900 border-l-2 border border-solid border-slate-800`}>{structure && createTableOfContents(structure as HeadingInterface[], 1, activeId)}</nav>;
+	return <nav className={`${styles.container} bg-slate-900 border-l-2 border border-solid border-slate-800`}>{structure && createTableOfContents(structure as HeadingInterface[], 2, activeId)}</nav>;
 }
