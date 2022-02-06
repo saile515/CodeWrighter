@@ -40,4 +40,11 @@
 
 .container p {
 	font-size: 1.173rem;
+	margin: 1rem 0;
+}
+
+@media only screen and (max-width: 800px) and (max-aspect-ratio: 8/10) {
+	.container h1 {
+		font-size: 3rem;
+	}
 }

@@ -34,6 +34,6 @@ p {
 
 @media only screen and (max-width: 800px) and (max-aspect-ratio: 8/10) {
 	html {
-		font-size: 3vw;
+		font-size: 4vw;
 	}
 }

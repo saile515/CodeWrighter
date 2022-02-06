@@ -28,3 +28,9 @@
 .container::-webkit-scrollbar-thumb:hover {
 	background: #555;
 }
+
+@media only screen and (max-width: 800px) and (max-aspect-ratio: 8/10) {
+	.container {
+		grid-template-columns: 1fr;
+	}
+}
