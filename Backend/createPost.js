@@ -48,7 +48,7 @@ async function createPost(post) {
 		});
 	}
 
-	const html = marked.parse(await file, { headerIds: false });
+	const html = marked.parse(await file);
 
 	// Write data to txt file
 	fs.writeFile(`${process.env.MD_OUTPUT}/${uuid}.txt`, html, null, (err) => {

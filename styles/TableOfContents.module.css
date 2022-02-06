@@ -6,3 +6,7 @@
 	align-self: start;
 	top: 0;
 }
+
+.active > a {
+	color: white !important;
+}

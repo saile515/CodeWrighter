@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 const Home: NextPage = () => {
 	const router = useRouter();
 	const [content, setContent] = useState("");
+	const [contentReady, setContentReady] = useState(false);
 
 	useEffect(() => {
 		if (!router.isReady) return;
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
 			.then((data) => data.text())
 			.then((data) => {
 				setContent(data);
+				setContentReady(true);
 			});
 	}, [router.isReady]);
 
@@ -23,7 +25,7 @@ const Home: NextPage = () => {
 		<div className={`${styles.container}`}>
 			<SideMenu />
 			<Blogpost content={content} />
-			<TableOfContents />
+			<TableOfContents ready={contentReady} />
 		</div>
 	);
 };

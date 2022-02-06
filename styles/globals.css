@@ -22,6 +22,10 @@ a {
 	box-sizing: border-box;
 }
 
+p {
+	margin: 0.25rem 0;
+}
+
 @media only screen and (max-width: 800px) and (min-aspect-ratio: 8/10) {
 	html {
 		font-size: 1.5vw;
