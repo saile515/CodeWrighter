@@ -7,6 +7,7 @@ export interface PostData {
 	date: Date;
 	edits: Date[];
 	name: string;
+	author?: string;
 }
 
 export default function PostBrowser() {
