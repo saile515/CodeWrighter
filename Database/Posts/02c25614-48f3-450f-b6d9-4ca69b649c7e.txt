@@ -1,2 +1,0 @@
-<p>I love <strong>refrigerators</strong>!</p>
-<p>Redo</p>
