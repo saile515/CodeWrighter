@@ -2,7 +2,8 @@
 	position: sticky;
 	position: -webkit-sticky;
 	height: 100vh;
-	overflow: auto;
+	overflow-y: auto;
+	overflow-x: hidden;
 	align-self: start;
 	top: 0;
 }

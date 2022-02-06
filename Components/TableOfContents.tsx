@@ -91,7 +91,7 @@ function createTableOfContents(structure: HeadingInterface[], depth: number, act
 		headings.push(
 			<li key={heading.id}>
 				<a
-					className={` transition-[padding] duration-300 hover:pl-2 ${heading.id == active ? "text-white" : "text-slate-400"}`}
+					className={`text-xl text-ellipsis whitespace-nowrap overflow-hidden block transition-[padding] duration-300 hover:pl-2 ${heading.id == active ? "text-white" : "text-slate-400"}`}
 					href={`#${heading.id}`}
 					onClick={(event) => {
 						event.preventDefault();
@@ -104,7 +104,7 @@ function createTableOfContents(structure: HeadingInterface[], depth: number, act
 		);
 	});
 
-	return <ul className=" pl-4 list-none">{headings}</ul>;
+	return <ul className=" pl-4 list-none max-w-full">{headings}</ul>;
 }
 
 export default function TableOfContents(props: { ready: boolean }) {
