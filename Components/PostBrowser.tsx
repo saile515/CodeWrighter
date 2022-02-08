@@ -17,6 +17,7 @@ export default function PostBrowser() {
 		fetch("/api/getpost")
 			.then((data) => data.json())
 			.then((data: PostData[]) => {
+				data.reverse();
 				setPosts(data);
 			});
 	}, []);

@@ -9,6 +9,7 @@ export default function Navigation() {
 		fetch("/api/getpost")
 			.then((data) => data.json())
 			.then((data: PostData[]) => {
+				data.reverse();
 				data.splice(3);
 				setRecentPosts(
 					data.map((post) => (
