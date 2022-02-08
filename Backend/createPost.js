@@ -49,6 +49,16 @@ async function createPost(post) {
 	}
 
 	file = (await file).replace(/^#\s.*/gm, "");
+
+	marked.setOptions({
+		renderer: new marked.Renderer(),
+		highlight: function (code, lang) {
+			const hljs = require("highlight.js");
+			const language = hljs.getLanguage(lang) ? lang : "plaintext";
+			return hljs.highlight(code, { language }).value;
+		},
+		langPrefix: "hljs language-",
+	});
 	const html = marked.parse(file);
 
 	// Write data to txt file

@@ -2,11 +2,10 @@
 	position: sticky;
 	position: -webkit-sticky;
 	height: 100vh;
-	overflow: auto;
 	align-self: start;
 	top: 0;
 	display: grid;
-	grid-template-rows: 3rem 12rem 16rem 1fr 3rem;
+	grid-template-rows: 3rem 16rem 16rem 1fr 3rem;
 	gap: 1rem;
 	padding: 1rem;
 }

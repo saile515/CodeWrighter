@@ -2,3 +2,20 @@
 	display: grid;
 	grid-template-columns: 1fr 3rem;
 }
+
+.submit {
+	background-image: url("/search.png");
+	background-size: 60%;
+	background-repeat: no-repeat;
+	background-position: center;
+	transition: 0.3s;
+	filter: invert(71%) sepia(11%) saturate(539%) hue-rotate(175deg) brightness(89%) contrast(87%);
+}
+
+.container:focus-within > .submit {
+	filter: invert(100%);
+}
+
+.container:focus-within > .input::placeholder {
+	color: transparent;
+}
