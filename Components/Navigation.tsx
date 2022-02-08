@@ -9,6 +9,7 @@ export default function Navigation() {
 		fetch("/api/getpost")
 			.then((data) => data.json())
 			.then((data: PostData[]) => {
+				data.splice(3);
 				setRecentPosts(
 					data.map((post) => (
 						<li className={navItemTW} key={post.id}>
