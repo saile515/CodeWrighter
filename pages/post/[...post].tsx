@@ -28,7 +28,7 @@ const Post: NextPage = () => {
 				setMetadata(data);
 				setMetaReady(true);
 			});
-	}, [router.isReady, router.query.post]);
+	}, [router.isReady]);
 
 	return (
 		<div className={`${styles.container}`}>

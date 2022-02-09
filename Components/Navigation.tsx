@@ -16,7 +16,7 @@ export default function Navigation() {
 				setRecentPosts(
 					data.map((post) => (
 						<li className={navItemTW} key={post.id}>
-							<Link href={`/post/${post.id}`}>
+							<Link href={`/post/[post]`} as={`/post/${post.id}`}>
 								<a>{post.name}</a>
 							</Link>
 						</li>
