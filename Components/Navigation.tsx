@@ -1,5 +1,6 @@
 import { ReactElement, useEffect, useState } from "react";
 
+import Link from "next/link";
 import { PostData } from "./PostBrowser";
 
 export default function Navigation() {
@@ -15,7 +16,9 @@ export default function Navigation() {
 				setRecentPosts(
 					data.map((post) => (
 						<li className={navItemTW} key={post.id}>
-							<a href={`/post/${post.id}`}>{post.name}</a>
+							<Link href={`/post/${post.id}`}>
+								<a>{post.name}</a>
+							</Link>
 						</li>
 					))
 				);
@@ -27,13 +30,19 @@ export default function Navigation() {
 			<p className=" text-slate-600 pl-4">Navigation</p>
 			<ul className=" list-none p-0 pl-4 my-2">
 				<li className={navItemTW}>
-					<a href="/">Home</a>
+					<Link href="/">
+						<a>Home</a>
+					</Link>
 				</li>
 				<li className={navItemTW}>
-					<a href="/">About</a>
+					<Link href="/">
+						<a>About</a>
+					</Link>
 				</li>
 				<li className={navItemTW}>
-					<a href="/">Collaboration</a>
+					<Link href="/">
+						<a>Collaboration</a>
+					</Link>
 				</li>
 			</ul>
 			<p className=" text-slate-600 pl-4">Recent posts</p>

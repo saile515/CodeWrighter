@@ -38,7 +38,8 @@ const Search: NextPage = () => {
 	useEffect(() => {
 		if (results.length < 2) return;
 		results.sort((a, b) => {
-			return searchItems.find((item) => item.id == a.key).rank - searchItems.find((item) => item.id == b.key).rank;
+			if (searchItems.find((item) => item.id == a.key).rank < searchItems.find((item) => item.id == b.key).rank) return -1;
+			else return 1;
 		});
 		results.reverse();
 	}, [results.length]);
@@ -48,7 +49,7 @@ const Search: NextPage = () => {
 			<SideMenu />
 			<div className="grid grid-rows-[4rem_1fr] bg-slate-900">
 				<p className="text-3xl border-b-2 border-slate-800 my-0 mx-4 text-slate-400 leading-[4rem]">
-					{results.length} results for "{router.query.search}"
+					{results.length} results for &quot;{router.query.search}&quot;
 				</p>
 				<div className="grid grid-cols-3 auto-rows-[15rem] gap-4 p-4">{results}</div>
 			</div>
