@@ -1,6 +1,6 @@
-import styles from "../styles/Blogpost.module.css";
-import { PostData } from "./PostBrowser";
 import Head from "next/head";
+import { PostData } from "./PostBrowser";
+import styles from "../styles/Blogpost.module.css";
 
 export default function Blogpost(props: { metadata: PostData; content: string }) {
 	return (

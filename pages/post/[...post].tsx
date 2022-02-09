@@ -1,12 +1,13 @@
-import type { NextPage } from "next";
-import styles from "../../styles/Post.module.css";
-import { useRouter } from "next/router";
-import SideMenu from "../../Components/SideMenu";
-import Blogpost from "../../Components/Blogpost";
-import TableOfContents from "../../Components/TableOfContents";
 import { useEffect, useState } from "react";
 
-const Home: NextPage = () => {
+import Blogpost from "../../Components/Blogpost";
+import type { NextPage } from "next";
+import SideMenu from "../../Components/SideMenu";
+import TableOfContents from "../../Components/TableOfContents";
+import styles from "../../styles/Post.module.css";
+import { useRouter } from "next/router";
+
+const Post: NextPage = () => {
 	const router = useRouter();
 	const [content, setContent] = useState("");
 	const [metadata, setMetadata] = useState({ id: "", name: "", date: new Date(), edits: [] });
@@ -38,4 +39,4 @@ const Home: NextPage = () => {
 	);
 };
 
-export default Home;
+export default Post;

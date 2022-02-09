@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+
 import PostTile from "./PostTile";
 import styles from "../styles/PostBrowser.module.css";
 

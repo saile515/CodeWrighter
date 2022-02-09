@@ -1,4 +1,5 @@
 import { Dispatch, MutableRefObject, ReactElement, SetStateAction, useEffect, useRef, useState } from "react";
+
 import styles from "../styles/TableOfContents.module.css";
 
 interface HeadingInterface {

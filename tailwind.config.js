@@ -3,9 +3,6 @@ module.exports = {
 	theme: {
 		extend: {},
 	},
-	corePlugins: {
-		preflight: false,
-	},
 	darkMode: "class",
 	plugins: [],
 	mode: "jit",

@@ -1,4 +1,5 @@
 import { ReactElement, useEffect, useState } from "react";
+
 import { PostData } from "./PostBrowser";
 
 export default function Navigation() {

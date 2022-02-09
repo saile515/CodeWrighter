@@ -1,8 +1,8 @@
-import styles from "../styles/SideMenu.module.css";
 import GitHubFeed from "./GitHubFeed";
 import Navigation from "./Navigation";
 import SearchBar from "./SearchBar";
 import SocialList from "./SocialList";
+import styles from "../styles/SideMenu.module.css";
 
 export default function SideMenu() {
 	return (
