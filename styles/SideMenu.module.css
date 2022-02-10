@@ -12,6 +12,11 @@
 
 @media only screen and (max-width: 800px) and (max-aspect-ratio: 8/10) {
 	.container {
-		display: none;
+		position: fixed;
+		width: 80vw;
+		border: none;
+		box-shadow: 1rem 0rem 1rem #111122;
+		transition: 0.3s all;
+		grid-template-rows: 2rem 3rem 16rem 16rem 1fr 3rem;
 	}
 }
