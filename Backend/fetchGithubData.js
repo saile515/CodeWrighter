@@ -18,6 +18,7 @@ export async function fetchCommits() {
 						if (data[event].payload.commits[commitIndex].author.name != process.env.GITHUB) continue;
 						const commit = data[event].payload.commits[commitIndex];
 						commit.repo = data[event].repo.name;
+						commit.date = data[event].created_at;
 						commits.push(commit);
 					}
 				}
