@@ -4,7 +4,8 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"scripts": {
-		"render": "node scripts/createPost"
+		"render": "node scripts/createPost",
+		"start": "node index.js"
 	},
 	"author": "",
 	"license": "ISC",

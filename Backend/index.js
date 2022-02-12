@@ -1,3 +1,3 @@
 import { fetchCommits } from "./fetchGithubData.js";
 
-fetchCommits();
+console.log(await fetchCommits());
