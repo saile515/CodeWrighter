@@ -42,3 +42,4 @@ yarn-error.log*
 /Markdown
 /Database/PostsInput/*
 /Database/PostsOutput/*
+/Database/posts.json

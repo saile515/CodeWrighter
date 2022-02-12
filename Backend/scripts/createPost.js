@@ -1,8 +1,9 @@
 import "dotenv/config";
 
-import crypto from "crypto";
 import fs from "fs";
+import hljs from "highlight.js";
 import { marked } from "marked";
+import { randomUUID } from "crypto";
 
 async function createPost(post) {
 	// Read post file
@@ -39,7 +40,7 @@ async function createPost(post) {
 		});
 	} else {
 		// If post does not exist, create post
-		uuid = crypto.randomUUID();
+		uuid = randomUUID();
 		(await database).posts.push({ id: uuid, date: new Date(), edits: [], name: (await file).match(/^#\s.*/g)[0].replace("# ", ""), author: process.env.AUTHOR });
 		fs.writeFile(`${process.env.DATABASE}/posts.json`, JSON.stringify(await database, null, 4), null, (err) => {
 			if (err) throw err;
@@ -54,7 +55,7 @@ async function createPost(post) {
 	marked.setOptions({
 		renderer: new marked.Renderer(),
 		highlight: function (code, lang) {
-			const hljs = require("highlight.js");
+			
 			const language = hljs.getLanguage(lang) ? lang : "plaintext";
 			return hljs.highlight(code, { language }).value;
 		},
