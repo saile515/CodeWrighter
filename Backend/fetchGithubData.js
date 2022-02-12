@@ -1,6 +1,9 @@
 import "dotenv/config";
 
 import fetch from "node-fetch";
+import fs from "fs";
+
+const fetchInterval = 1000 * 60 * 1;
 
 export async function fetchCommits() {
 	return new Promise((resolve, reject) => {
@@ -21,4 +24,13 @@ export async function fetchCommits() {
 				resolve(commits);
 			});
 	});
+}
+
+export function fetchData() {
+	setInterval(async () => {
+		const commits = await fetchCommits();
+		fs.writeFile(`${process.env.DATABASE}/commits.json`, JSON.stringify(commits, null, 4), null, (err) => {
+			if (err) throw err;
+		});
+	}, fetchInterval);
 }

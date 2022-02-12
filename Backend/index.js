@@ -1,3 +1,3 @@
-import { fetchCommits } from "./fetchGithubData.js";
+import { fetchData } from "./fetchGithubData.js";
 
-console.log(await fetchCommits());
+fetchData();
