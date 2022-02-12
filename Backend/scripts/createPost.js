@@ -1,12 +1,13 @@
-const fs = require("fs");
-const crypto = require("crypto");
-const { marked } = require("marked");
-require("dotenv").config();
+import "dotenv/config";
+
+import crypto from "crypto";
+import fs from "fs";
+import { marked } from "marked";
 
 async function createPost(post) {
 	// Read post file
 	let file = new Promise((resolve, reject) => {
-		fs.readFile(`${process.env.MD_INPUT}/${post}.md`, "utf8", (err, data) => {
+		fs.readFile(`${process.env.DATABASE}/PostsInput/${post}.md`, "utf8", (err, data) => {
 			if (err) throw err;
 			resolve(data);
 		});
@@ -14,7 +15,7 @@ async function createPost(post) {
 
 	// Read data file
 	const database = new Promise((resolve, reject) => {
-		fs.readFile(`./Database/posts.json`, "utf8", (err, data) => {
+		fs.readFile(`${process.env.DATABASE}/posts.json`, "utf8", (err, data) => {
 			if (err) throw err;
 			resolve(JSON.parse(data));
 		});
@@ -33,17 +34,17 @@ async function createPost(post) {
 				return post.id == uuid;
 			})
 			.edits.push(new Date());
-		fs.writeFile("./Database/posts.json", JSON.stringify(await database, null, 4), null, (err) => {
+		fs.writeFile(`${process.env.DATABASE}/posts.json`, JSON.stringify(await database, null, 4), null, (err) => {
 			if (err) throw err;
 		});
 	} else {
 		// If post does not exist, create post
 		uuid = crypto.randomUUID();
 		(await database).posts.push({ id: uuid, date: new Date(), edits: [], name: (await file).match(/^#\s.*/g)[0].replace("# ", ""), author: process.env.AUTHOR });
-		fs.writeFile("./Database/posts.json", JSON.stringify(await database, null, 4), null, (err) => {
+		fs.writeFile(`${process.env.DATABASE}/posts.json`, JSON.stringify(await database, null, 4), null, (err) => {
 			if (err) throw err;
 		});
-		fs.writeFile(`${process.env.MD_INPUT}/${post}.md`, `---\nuuid: ${uuid}\n---\n\n${await file}`, null, (err) => {
+		fs.writeFile(`${process.env.DATABASE}/PostsInput/${post}.md`, `---\nuuid: ${uuid}\n---\n\n${await file}`, null, (err) => {
 			if (err) throw err;
 		});
 	}
@@ -62,8 +63,9 @@ async function createPost(post) {
 	const html = marked.parse(file);
 
 	// Write data to txt file
-	fs.writeFile(`${process.env.MD_OUTPUT}/${uuid}.txt`, html, null, (err) => {
+	fs.writeFile(`${process.env.DATABASE}/PostsOutput/${uuid}.txt`, html, null, (err) => {
 		if (err) throw err;
+		console.log("Post rendered");
 	});
 }
 
