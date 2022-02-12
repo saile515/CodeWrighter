@@ -1,5 +1,6 @@
 import "dotenv/config";
 
+import { exit } from "process";
 import fs from "fs";
 import hljs from "highlight.js";
 import { marked } from "marked";
@@ -22,14 +23,20 @@ async function createPost(post) {
 		});
 	});
 
+	// If file doesn't container hading, error.
+	if (!(await file).match(/^#\s.*/gm)) {
+		console.error("File doesn't container heading!");
+		exit();
+	}
+
 	// Initialize uuid
 	let uuid;
 
 	// Check if post exists by looking for metadata
-	if (/^---\nuuid:\s([a-zA-Z0-9\-]*)\n---\n/g.test(await file)) {
+	if (/^(?:\-\-\-)(.*?)(?:\-\-\-|\.\.\.)/s.test(await file)) {
 		// If post exists, edit the file, and push the date
-		uuid = (await file).replace(/^---\nuuid:\s([a-zA-Z0-9\-]*)\n---\n[\s\S]*/g, "$1");
-		file = (await file).replace(/^---\nuuid:\s([a-zA-Z0-9\-]*)\n---\n/g, "");
+		uuid = (await file).replace(/^(?:\-\-\-)(.*?)uuid:\s([a-f0-9\-]*)(.*?)(?:\-\-\-|\.\.\.).*/s, "$2");
+		file = (await file).replace(/^(?:\-\-\-)(.*?)(?:\-\-\-|\.\.\.)/s, "");
 		(await database).posts
 			.find((post) => {
 				return post.id == uuid;
@@ -41,7 +48,7 @@ async function createPost(post) {
 	} else {
 		// If post does not exist, create post
 		uuid = randomUUID();
-		(await database).posts.push({ id: uuid, date: new Date(), edits: [], name: (await file).match(/^#\s.*/g)[0].replace("# ", ""), author: process.env.AUTHOR });
+		(await database).posts.push({ id: uuid, date: new Date(), edits: [], name: (await file).match(/^#\s.*/gm)[0].replace("# ", ""), author: process.env.AUTHOR });
 		fs.writeFile(`${process.env.DATABASE}/posts.json`, JSON.stringify(await database, null, 4), null, (err) => {
 			if (err) throw err;
 		});
@@ -55,7 +62,6 @@ async function createPost(post) {
 	marked.setOptions({
 		renderer: new marked.Renderer(),
 		highlight: function (code, lang) {
-			
 			const language = hljs.getLanguage(lang) ? lang : "plaintext";
 			return hljs.highlight(code, { language }).value;
 		},
