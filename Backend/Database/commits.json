@@ -1,5 +1,14 @@
 [
     {
+        "sha": "26ba9c7339d44280c4f09f33c9a4583fbb53decd",
+        "author": "saile515",
+        "message": "Fixed commit url format issue",
+        "distinct": true,
+        "url": "https://www.github.com/saile515/blog/commit/26ba9c7339d44280c4f09f33c9a4583fbb53decd",
+        "repo": "saile515/blog",
+        "date": "2022-02-13T14:19:14Z"
+    },
+    {
         "sha": "97413f3a91810833a523ca2e5ffe5e53c471948a",
         "author": "saile515",
         "message": "Converted api function to fetch from backend api",

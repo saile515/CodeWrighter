@@ -12,6 +12,13 @@ app.get("/posts/", (req, res) => {
 	});
 });
 
+app.get("/commits/", (req, res) => {
+	fs.readFile(`${process.env.DATABASE}/commits.json`, "utf-8", (err, data) => {
+		if (err) res.send("Error");
+		res.send(data);
+	});
+});
+
 app.get("/post/:id", (req, res) => {
 	fs.readFile(`${process.env.DATABASE}/PostsOutput/${req.params.id}.txt`, "utf-8", (err, data) => {
 		if (err) res.send("Post not found!");
