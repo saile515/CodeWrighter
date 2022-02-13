@@ -57,9 +57,10 @@ export async function fetchCommits(): Promise<Commit[]> {
 				for (const commitIndex in data[event].payload.commits) {
 					if ((data[event].payload.commits[commitIndex].author as { name: string; email: string }).name != process.env.GITHUB) continue;
 					const commit = data[event].payload.commits[commitIndex];
+					commit.author = (commit.author as { name: string; email: string }).name;
 					commit.repo = data[event].repo.name;
 					commit.date = data[event].created_at;
-					commit.url = `https://www.github.com/${commit.author}/${commit.repo}/commit/${commit.sha}`;
+					commit.url = `https://www.github.com/${commit.repo}/commit/${commit.sha}`;
 					commits.push(commit);
 				}
 			}
