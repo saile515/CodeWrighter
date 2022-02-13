@@ -1,3 +1,41 @@
 {
-	"posts": []
+    "posts": [
+        {
+            "id": "837618bc-a2d7-4d88-8be6-743b42cbeb62",
+            "date": "2022-02-13T13:48:19.070Z",
+            "edits": [
+                "2022-02-13T13:48:30.190Z"
+            ],
+            "name": "Hello world",
+            "author": "Elias Jörgensen"
+        },
+        {
+            "id": "a729bc29-96f1-4745-b568-a6fca8a3760e",
+            "date": "2022-02-13T13:48:33.435Z",
+            "edits": [],
+            "name": "This is test 2",
+            "author": "Elias Jörgensen"
+        },
+        {
+            "id": "3c74c920-8ffa-4700-b49d-b07c5b380958",
+            "date": "2022-02-13T13:48:42.216Z",
+            "edits": [],
+            "name": "How to be productive as a developer",
+            "author": "Elias Jörgensen"
+        },
+        {
+            "id": "c9d36d1e-eaf4-47c5-aa5c-222b185910fb",
+            "date": "2022-02-13T13:48:49.920Z",
+            "edits": [],
+            "name": "This is a markdown file",
+            "author": "Elias Jörgensen"
+        },
+        {
+            "id": "2005cc77-d0c1-424a-ad1b-f5b650857896",
+            "date": "2022-02-13T13:48:56.280Z",
+            "edits": [],
+            "name": "DOES THE NAVIGAION CUT OF AFTER 3?",
+            "author": "Elias Jörgensen"
+        }
+    ]
 }

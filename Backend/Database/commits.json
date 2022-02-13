@@ -1,1 +1,374 @@
-[]
+[
+    {
+        "sha": "b8056620b7719da7d984e23cfab0f3132cbc67d2",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Moved database to backend",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/b8056620b7719da7d984e23cfab0f3132cbc67d2",
+        "repo": "saile515/blog",
+        "date": "2022-02-13T12:10:28Z"
+    },
+    {
+        "sha": "01766d8b7cf803fead7475e969b99c6d5e95ded9",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Added date to commits",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/01766d8b7cf803fead7475e969b99c6d5e95ded9",
+        "repo": "saile515/blog",
+        "date": "2022-02-12T18:17:18Z"
+    },
+    {
+        "sha": "0faa5227321a5a2ea4ad3b37c9e83e5c110842fb",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Periodically fetch commits",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/0faa5227321a5a2ea4ad3b37c9e83e5c110842fb",
+        "repo": "saile515/blog",
+        "date": "2022-02-12T17:53:12Z"
+    },
+    {
+        "sha": "cfd6d51c16dbcd2d9320b13be9d75796a3bdcbed",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Fetch commits",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/cfd6d51c16dbcd2d9320b13be9d75796a3bdcbed",
+        "repo": "saile515/blog",
+        "date": "2022-02-12T17:36:41Z"
+    },
+    {
+        "sha": "d9844dc24c188c5b55bd429aa3cdf572596be916",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Fixed post rendering bug",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/d9844dc24c188c5b55bd429aa3cdf572596be916",
+        "repo": "saile515/blog",
+        "date": "2022-02-12T17:07:39Z"
+    },
+    {
+        "sha": "9d4dedcd1720f20cfaafb1de99ca95682635d598",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Convered createPost to es6 module",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/9d4dedcd1720f20cfaafb1de99ca95682635d598",
+        "repo": "saile515/blog",
+        "date": "2022-02-12T15:38:09Z"
+    },
+    {
+        "sha": "bbfe743d71091efb7d3207eb16aab313098dfc34",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Env variables recongigured",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/bbfe743d71091efb7d3207eb16aab313098dfc34",
+        "repo": "saile515/blog",
+        "date": "2022-02-12T15:02:25Z"
+    },
+    {
+        "sha": "e3e02bde67d208b0ce6f555e1833dba2a3cb8724",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Organized backend as seperate package",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/e3e02bde67d208b0ce6f555e1833dba2a3cb8724",
+        "repo": "saile515/blog",
+        "date": "2022-02-12T14:22:00Z"
+    },
+    {
+        "sha": "e538bb90409813102239c83570b7f137ab386601",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Decreased margin on blogpost metadata",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/e538bb90409813102239c83570b7f137ab386601",
+        "repo": "saile515/blog",
+        "date": "2022-02-10T14:33:39Z"
+    },
+    {
+        "sha": "a77fb71a6c3e70f8157b4327e381f48b3a6ae006",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Mobile menu",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/a77fb71a6c3e70f8157b4327e381f48b3a6ae006",
+        "repo": "saile515/blog",
+        "date": "2022-02-10T13:22:10Z"
+    },
+    {
+        "sha": "7475d6b08855057c2f1a3e2e9b667ce5e09c890e",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Actually fixed navigation",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/7475d6b08855057c2f1a3e2e9b667ce5e09c890e",
+        "repo": "saile515/blog",
+        "date": "2022-02-09T21:02:06Z"
+    },
+    {
+        "sha": "ec9f1744700603c9ce0620cc26fe4d90674cad50",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Fixed nav issue",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/ec9f1744700603c9ce0620cc26fe4d90674cad50",
+        "repo": "saile515/blog",
+        "date": "2022-02-09T17:29:58Z"
+    },
+    {
+        "sha": "c85b2c42d1a41d14ea1a299c8597eb9660947b67",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Search improvments",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/c85b2c42d1a41d14ea1a299c8597eb9660947b67",
+        "repo": "saile515/blog",
+        "date": "2022-02-09T13:43:12Z"
+    },
+    {
+        "sha": "d52cb35d60defcf4ca2831c36de23dafb3323baf",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Search + sort",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/d52cb35d60defcf4ca2831c36de23dafb3323baf",
+        "repo": "saile515/blog",
+        "date": "2022-02-09T11:31:06Z"
+    },
+    {
+        "sha": "11730c7b2b88d356f68a3e251cefe9ac7d44147a",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Reversed post array to display recent posts",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/11730c7b2b88d356f68a3e251cefe9ac7d44147a",
+        "repo": "saile515/blog",
+        "date": "2022-02-08T18:00:28Z"
+    },
+    {
+        "sha": "f62e65475ab7e5591a80a78d7874532f8f871982",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Limited posts in navigation to 3",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/f62e65475ab7e5591a80a78d7874532f8f871982",
+        "repo": "saile515/blog",
+        "date": "2022-02-08T17:52:22Z"
+    },
+    {
+        "sha": "55934b56f03757060ee4e003ddbba6818def8066",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Moved markdown posts to database",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/55934b56f03757060ee4e003ddbba6818def8066",
+        "repo": "saile515/blog",
+        "date": "2022-02-08T17:43:23Z"
+    },
+    {
+        "sha": "9e178117caa25a68841543a3f6f3cb8c90563e3d",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Code highlighting",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/9e178117caa25a68841543a3f6f3cb8c90563e3d",
+        "repo": "saile515/blog",
+        "date": "2022-02-08T17:33:53Z"
+    },
+    {
+        "sha": "c0be0ed6280a925118d13edbfbdb526ce6b874c6",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Removed .env from reposotory",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/c0be0ed6280a925118d13edbfbdb526ce6b874c6",
+        "repo": "saile515/blog",
+        "date": "2022-02-08T12:57:20Z"
+    },
+    {
+        "sha": "1dd0ff58102054aeec2b629cf9484c8d59349194",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Removed database data from git",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/1dd0ff58102054aeec2b629cf9484c8d59349194",
+        "repo": "saile515/blog",
+        "date": "2022-02-08T12:57:20Z"
+    },
+    {
+        "sha": "107804cfad113e4c9d37ca173fa961a5ba9f48e5",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Search bar (front end)",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/107804cfad113e4c9d37ca173fa961a5ba9f48e5",
+        "repo": "saile515/blog",
+        "date": "2022-02-08T12:57:20Z"
+    },
+    {
+        "sha": "0566c3ec4cbca69382ee6ac2d6369d8c96b569e9",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Table of contents ellipsis",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/0566c3ec4cbca69382ee6ac2d6369d8c96b569e9",
+        "repo": "saile515/blog",
+        "date": "2022-02-06T18:52:26Z"
+    },
+    {
+        "sha": "e420fb306c3d31b55e4e2b65a09549040cb04d1d",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Display metadata",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/e420fb306c3d31b55e4e2b65a09549040cb04d1d",
+        "repo": "saile515/blog",
+        "date": "2022-02-06T18:02:15Z"
+    },
+    {
+        "sha": "cccbb7f9364455442a045618a9653171a0bfedf2",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Reworked blogpost display internal format",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/cccbb7f9364455442a045618a9653171a0bfedf2",
+        "repo": "saile515/blog",
+        "date": "2022-02-06T17:39:20Z"
+    },
+    {
+        "sha": "6614c3ea64da7c63fe342f61784d553aa758ebe7",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Mobile adjustments",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/6614c3ea64da7c63fe342f61784d553aa758ebe7",
+        "repo": "saile515/blog",
+        "date": "2022-02-06T16:04:07Z"
+    },
+    {
+        "sha": "ec361d3557ccff4f91738fd3cdce3f72e683b536",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Table of contents highlighting",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/ec361d3557ccff4f91738fd3cdce3f72e683b536",
+        "repo": "saile515/blog",
+        "date": "2022-02-06T13:12:45Z"
+    },
+    {
+        "sha": "83dc86cd0fb02be8183f5259839cdc5fabb64d22",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Table of contents highlighting",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/83dc86cd0fb02be8183f5259839cdc5fabb64d22",
+        "repo": "saile515/blog",
+        "date": "2022-02-06T12:46:55Z"
+    },
+    {
+        "sha": "dc118a7b6034ead2f08d0598d31f5a605f650462",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Table of contents",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/dc118a7b6034ead2f08d0598d31f5a605f650462",
+        "repo": "saile515/blog",
+        "date": "2022-02-06T12:15:04Z"
+    },
+    {
+        "sha": "1c1d5772f3068cd12332a285746663cb3b62af44",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Proper post heading margin",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/1c1d5772f3068cd12332a285746663cb3b62af44",
+        "repo": "saile515/blog",
+        "date": "2022-02-04T18:40:27Z"
+    },
+    {
+        "sha": "1400bd8bb4f98954b1838a37451e2f49a7737c71",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Forgot to commit",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/1400bd8bb4f98954b1838a37451e2f49a7737c71",
+        "repo": "saile515/blog",
+        "date": "2022-02-04T18:23:21Z"
+    },
+    {
+        "sha": "88489cd7d0d6ed23dfb1595118b30b7e6e0b030b",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Minor styling",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/88489cd7d0d6ed23dfb1595118b30b7e6e0b030b",
+        "repo": "saile515/blog",
+        "date": "2022-02-04T15:39:41Z"
+    }
+]
