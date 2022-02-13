@@ -1,5 +1,23 @@
 [
     {
+        "sha": "a1f597e448123c63748cbb222f46342ac8da2ea4",
+        "author": "saile515",
+        "message": "Deleted unused database directory",
+        "distinct": true,
+        "url": "https://www.github.com/saile515/blog/commit/a1f597e448123c63748cbb222f46342ac8da2ea4",
+        "repo": "saile515/blog",
+        "date": "2022-02-13T14:21:35Z"
+    },
+    {
+        "sha": "e6821a4ff9a5077247c680b6ca07b8a86122d973",
+        "author": "saile515",
+        "message": "Added api route for commits",
+        "distinct": true,
+        "url": "https://www.github.com/saile515/blog/commit/e6821a4ff9a5077247c680b6ca07b8a86122d973",
+        "repo": "saile515/blog",
+        "date": "2022-02-13T14:20:33Z"
+    },
+    {
         "sha": "26ba9c7339d44280c4f09f33c9a4583fbb53decd",
         "author": "saile515",
         "message": "Fixed commit url format issue",
@@ -277,23 +295,5 @@
         "url": "https://www.github.com/saile515/blog/commit/ec361d3557ccff4f91738fd3cdce3f72e683b536",
         "repo": "saile515/blog",
         "date": "2022-02-06T13:12:45Z"
-    },
-    {
-        "sha": "83dc86cd0fb02be8183f5259839cdc5fabb64d22",
-        "author": "saile515",
-        "message": "Table of contents highlighting",
-        "distinct": true,
-        "url": "https://www.github.com/saile515/blog/commit/83dc86cd0fb02be8183f5259839cdc5fabb64d22",
-        "repo": "saile515/blog",
-        "date": "2022-02-06T12:46:55Z"
-    },
-    {
-        "sha": "dc118a7b6034ead2f08d0598d31f5a605f650462",
-        "author": "saile515",
-        "message": "Table of contents",
-        "distinct": true,
-        "url": "https://www.github.com/saile515/blog/commit/dc118a7b6034ead2f08d0598d31f5a605f650462",
-        "repo": "saile515/blog",
-        "date": "2022-02-06T12:15:04Z"
     }
 ]

@@ -27,8 +27,8 @@ export default function Navigation() {
 
 	return (
 		<div className=" overflow-hidden">
-			<p className=" text-slate-600 pl-4">Navigation</p>
-			<ul className=" list-none p-0 pl-4 my-2">
+			<p className=" text-slate-600">Navigation</p>
+			<ul className=" list-none p-0 my-2">
 				<li className={navItemTW}>
 					<Link href="/">
 						<a>Home</a>
@@ -45,8 +45,8 @@ export default function Navigation() {
 					</Link>
 				</li>
 			</ul>
-			<p className=" text-slate-600 pl-4">Recent posts</p>
-			<ul className=" list-none p-0 pl-4 my-2">{recentPosts}</ul>
+			<p className=" text-slate-600">Recent posts</p>
+			<ul className=" list-none p-0 my-2">{recentPosts}</ul>
 		</div>
 	);
 }
