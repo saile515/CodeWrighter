@@ -4,7 +4,7 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"scripts": {
-		"render": "node scripts/createPost",
+		"render": "tsc scripts/createPost.ts --target esnext --module esnext --moduleResolution node --esModuleInterop true && node scripts/createPost.js",
 		"start": "tsc && node build"
 	},
 	"author": "",

@@ -1,5 +1,17 @@
 [
     {
+        "sha": "841a3934db56ea992739ebd8a0b9d1b02ad39005",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Set up foundations for backend API",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/841a3934db56ea992739ebd8a0b9d1b02ad39005",
+        "repo": "saile515/blog",
+        "date": "2022-02-13T13:49:39Z"
+    },
+    {
         "sha": "b8056620b7719da7d984e23cfab0f3132cbc67d2",
         "author": {
             "email": "elias.jorgensen2006@gmail.com",
@@ -358,17 +370,5 @@
         "url": "https://www.github.com/[object Object]/saile515/blog/commit/1400bd8bb4f98954b1838a37451e2f49a7737c71",
         "repo": "saile515/blog",
         "date": "2022-02-04T18:23:21Z"
-    },
-    {
-        "sha": "88489cd7d0d6ed23dfb1595118b30b7e6e0b030b",
-        "author": {
-            "email": "elias.jorgensen2006@gmail.com",
-            "name": "saile515"
-        },
-        "message": "Minor styling",
-        "distinct": true,
-        "url": "https://www.github.com/[object Object]/saile515/blog/commit/88489cd7d0d6ed23dfb1595118b30b7e6e0b030b",
-        "repo": "saile515/blog",
-        "date": "2022-02-04T15:39:41Z"
     }
 ]
