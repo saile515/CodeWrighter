@@ -1,5 +1,23 @@
 [
     {
+        "sha": "78d79b731ab331a95735f9c80db1f19e468b3bb3",
+        "author": "saile515",
+        "message": "Github feed frontend",
+        "distinct": true,
+        "url": "https://www.github.com/saile515/blog/commit/78d79b731ab331a95735f9c80db1f19e468b3bb3",
+        "repo": "saile515/blog",
+        "date": "2022-02-13T15:34:05Z"
+    },
+    {
+        "sha": "e76ea75194ced35a72cd6603ba42a4e8c3b5bc0e",
+        "author": "saile515",
+        "message": "Merge branch 'main' of https://github.com/saile515/blog",
+        "distinct": true,
+        "url": "https://www.github.com/saile515/blog/commit/e76ea75194ced35a72cd6603ba42a4e8c3b5bc0e",
+        "repo": "saile515/blog",
+        "date": "2022-02-13T15:34:05Z"
+    },
+    {
         "sha": "a1f597e448123c63748cbb222f46342ac8da2ea4",
         "author": "saile515",
         "message": "Deleted unused database directory",
@@ -286,14 +304,5 @@
         "url": "https://www.github.com/saile515/blog/commit/6614c3ea64da7c63fe342f61784d553aa758ebe7",
         "repo": "saile515/blog",
         "date": "2022-02-06T16:04:07Z"
-    },
-    {
-        "sha": "ec361d3557ccff4f91738fd3cdce3f72e683b536",
-        "author": "saile515",
-        "message": "Table of contents highlighting",
-        "distinct": true,
-        "url": "https://www.github.com/saile515/blog/commit/ec361d3557ccff4f91738fd3cdce3f72e683b536",
-        "repo": "saile515/blog",
-        "date": "2022-02-06T13:12:45Z"
     }
 ]

@@ -8,9 +8,8 @@ import styles from "../styles/SideMenu.module.css";
 
 export default function SideMenu() {
 	const [open, setOpen] = useState<boolean>(false);
+	const [screen, setScreen] = useState<{ width: number; height: number; aspect: number }>({ width: 0, height: 0, aspect: 0 });
 	const mobileThreshold = 800;
-	const [screen, setScreen] = useState<{ width: number; height: number; aspect: number }>({ width: 0, height: 0, aspect: 0 }),
-		screenHeight: number = 0;
 
 	function handleClick() {
 		setOpen(!open);
@@ -31,11 +30,12 @@ export default function SideMenu() {
 					{open ? "✖" : "···"}
 				</button>
 			)}
-			{!open && screen.width < mobileThreshold ? <div></div> : ""}
+			{!open && screen.width < mobileThreshold && screen.aspect < 8 / 10 ? <div></div> : ""}
 
 			<SearchBar />
 			<Navigation />
 			<GitHubFeed />
+			<div></div>
 			<SocialList />
 		</div>
 	);

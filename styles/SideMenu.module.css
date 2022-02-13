@@ -5,7 +5,7 @@
 	align-self: start;
 	top: 0;
 	display: grid;
-	grid-template-rows: 3rem 16rem 16rem 1fr 3rem;
+	grid-template-rows: 3rem 16rem 16rem 1fr 2rem;
 	gap: 1rem;
 	padding: 1rem;
 }
@@ -17,6 +17,7 @@
 		border: none;
 		box-shadow: 1rem 0rem 1rem #111122;
 		transition: 0.3s all;
-		grid-template-rows: 2rem 3rem 16rem 16rem 1fr 3rem;
+		grid-template-rows: 2rem 3rem 16rem 16rem 1fr 2rem;
+		overflow: auto;
 	}
 }
