@@ -1,5 +1,29 @@
 [
     {
+        "sha": "0a316594961c45195b6da2d7f505218773e9a0be",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Converted createPost to typescript",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/0a316594961c45195b6da2d7f505218773e9a0be",
+        "repo": "saile515/blog",
+        "date": "2022-02-13T14:03:04Z"
+    },
+    {
+        "sha": "ee75b45cb18ea6c25b354a3457695b53202c9ef1",
+        "author": {
+            "email": "elias.jorgensen2006@gmail.com",
+            "name": "saile515"
+        },
+        "message": "Converted createPost to typescript",
+        "distinct": true,
+        "url": "https://www.github.com/[object Object]/saile515/blog/commit/ee75b45cb18ea6c25b354a3457695b53202c9ef1",
+        "repo": "saile515/blog",
+        "date": "2022-02-13T14:03:04Z"
+    },
+    {
         "sha": "841a3934db56ea992739ebd8a0b9d1b02ad39005",
         "author": {
             "email": "elias.jorgensen2006@gmail.com",
@@ -358,17 +382,5 @@
         "url": "https://www.github.com/[object Object]/saile515/blog/commit/1c1d5772f3068cd12332a285746663cb3b62af44",
         "repo": "saile515/blog",
         "date": "2022-02-04T18:40:27Z"
-    },
-    {
-        "sha": "1400bd8bb4f98954b1838a37451e2f49a7737c71",
-        "author": {
-            "email": "elias.jorgensen2006@gmail.com",
-            "name": "saile515"
-        },
-        "message": "Forgot to commit",
-        "distinct": true,
-        "url": "https://www.github.com/[object Object]/saile515/blog/commit/1400bd8bb4f98954b1838a37451e2f49a7737c71",
-        "repo": "saile515/blog",
-        "date": "2022-02-04T18:23:21Z"
     }
 ]
