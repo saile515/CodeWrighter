@@ -1,5 +1,14 @@
 [
     {
+        "sha": "76f9893042b61ffb53261f12a68e0b77abdc7605",
+        "author": "saile515",
+        "message": "Added links to github feed",
+        "distinct": true,
+        "url": "https://www.github.com/saile515/blog/commit/76f9893042b61ffb53261f12a68e0b77abdc7605",
+        "repo": "saile515/blog",
+        "date": "2022-02-14T18:11:17Z"
+    },
+    {
         "sha": "e09fd71788ada099cc33fd93e9daac4a93bb6435",
         "author": "saile515",
         "message": "Social links",
@@ -295,14 +304,5 @@
         "url": "https://www.github.com/saile515/blog/commit/e420fb306c3d31b55e4e2b65a09549040cb04d1d",
         "repo": "saile515/blog",
         "date": "2022-02-06T18:02:15Z"
-    },
-    {
-        "sha": "cccbb7f9364455442a045618a9653171a0bfedf2",
-        "author": "saile515",
-        "message": "Reworked blogpost display internal format",
-        "distinct": true,
-        "url": "https://www.github.com/saile515/blog/commit/cccbb7f9364455442a045618a9653171a0bfedf2",
-        "repo": "saile515/blog",
-        "date": "2022-02-06T17:39:20Z"
     }
 ]

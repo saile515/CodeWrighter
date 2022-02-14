@@ -24,19 +24,29 @@ export default function SideMenu() {
 	}, []);
 
 	return (
-		<div className={`${styles.container} bg-slate-900 border-r-2 border border-solid border-slate-800 z-10 ${open ? " left-0" : " overflow-visible left-[-80vw]"}`}>
-			{screen.width < mobileThreshold && (
-				<button onClick={handleClick} className={` text-xl bg-slate-800 rounded-lg z-50 text-slate-400 w-8 h-8 ${open ? " justify-self-end" : " absolute right-[-3rem] top-4 opacity-80"}`}>
-					{open ? "✖" : "···"}
+		<div className=" sticky self-start top-0 z-50">
+			{!open && screen.width < mobileThreshold && screen.aspect < 8 / 10 ? (
+				<button onClick={handleClick} className=" text-xl bg-slate-800 rounded-lg z-50 text-slate-400 w-8 h-8 fixed right-4 top-4 opacity-80">
+					···
 				</button>
+			) : (
+				""
 			)}
-			{!open && screen.width < mobileThreshold && screen.aspect < 8 / 10 ? <div></div> : ""}
+			<div className={`${styles.container} bg-slate-900 border-r-2 border border-solid border-slate-800 z-50 overflow-y-auto ${open ? "left-0" : "left-[-80vw]"}`}>
+				{screen.width < mobileThreshold && screen.aspect < 8 / 10 ? (
+					<button onClick={handleClick} className={` text-xl bg-slate-800 rounded-lg z-50 text-slate-400 w-8 h-8 justify-self-end`}>
+						✖
+					</button>
+				) : (
+					""
+				)}
 
-			<SearchBar />
-			<Navigation />
-			<GitHubFeed />
-			<div></div>
-			<SocialList />
+				<SearchBar />
+				<Navigation />
+				<GitHubFeed />
+				<div></div>
+				<SocialList />
+			</div>
 		</div>
 	);
 }

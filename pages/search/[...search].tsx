@@ -51,7 +51,7 @@ const Search: NextPage = () => {
 				<p className="text-3xl border-b-2 border-slate-800 my-0 mx-4 text-slate-400 leading-[4rem]">
 					{results.length} results for &quot;{router.query.search}&quot;
 				</p>
-				<div className="grid grid-cols-3 auto-rows-[15rem] gap-4 p-4">{results}</div>
+				<div className={`${styles.browser} grid gap-4 p-4 auto-rows-[15rem]`}>{results}</div>
 			</div>
 		</div>
 	);
