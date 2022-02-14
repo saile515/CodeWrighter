@@ -1,5 +1,14 @@
 [
     {
+        "sha": "a1e8e0c1917d77c4d75bbe5903959343e9c33db6",
+        "author": "saile515",
+        "message": "Added rel no referrer to offsite links",
+        "distinct": true,
+        "url": "https://www.github.com/saile515/blog/commit/a1e8e0c1917d77c4d75bbe5903959343e9c33db6",
+        "repo": "saile515/blog",
+        "date": "2022-02-14T19:34:14Z"
+    },
+    {
         "sha": "b5e25ca4cf908a32dad37469c5412771121d9e10",
         "author": "saile515",
         "message": "Fixed menu button not showing up",
@@ -295,14 +304,5 @@
         "url": "https://www.github.com/saile515/blog/commit/107804cfad113e4c9d37ca173fa961a5ba9f48e5",
         "repo": "saile515/blog",
         "date": "2022-02-08T12:57:20Z"
-    },
-    {
-        "sha": "0566c3ec4cbca69382ee6ac2d6369d8c96b569e9",
-        "author": "saile515",
-        "message": "Table of contents ellipsis",
-        "distinct": true,
-        "url": "https://www.github.com/saile515/blog/commit/0566c3ec4cbca69382ee6ac2d6369d8c96b569e9",
-        "repo": "saile515/blog",
-        "date": "2022-02-06T18:52:26Z"
     }
 ]
