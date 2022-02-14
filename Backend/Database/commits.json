@@ -1,5 +1,14 @@
 [
     {
+        "sha": "b5e25ca4cf908a32dad37469c5412771121d9e10",
+        "author": "saile515",
+        "message": "Fixed menu button not showing up",
+        "distinct": true,
+        "url": "https://www.github.com/saile515/blog/commit/b5e25ca4cf908a32dad37469c5412771121d9e10",
+        "repo": "saile515/blog",
+        "date": "2022-02-14T19:14:35Z"
+    },
+    {
         "sha": "76f9893042b61ffb53261f12a68e0b77abdc7605",
         "author": "saile515",
         "message": "Added links to github feed",
@@ -295,14 +304,5 @@
         "url": "https://www.github.com/saile515/blog/commit/0566c3ec4cbca69382ee6ac2d6369d8c96b569e9",
         "repo": "saile515/blog",
         "date": "2022-02-06T18:52:26Z"
-    },
-    {
-        "sha": "e420fb306c3d31b55e4e2b65a09549040cb04d1d",
-        "author": "saile515",
-        "message": "Display metadata",
-        "distinct": true,
-        "url": "https://www.github.com/saile515/blog/commit/e420fb306c3d31b55e4e2b65a09549040cb04d1d",
-        "repo": "saile515/blog",
-        "date": "2022-02-06T18:02:15Z"
     }
 ]
