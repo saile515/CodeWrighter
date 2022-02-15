@@ -1,5 +1,14 @@
 [
     {
+        "sha": "0fc089ed40b1385eed19538ed789ef4c2678d8ef",
+        "author": "saile515",
+        "message": "Changed title + maybe fixed backend crashing",
+        "distinct": true,
+        "url": "https://www.github.com/saile515/blog/commit/0fc089ed40b1385eed19538ed789ef4c2678d8ef",
+        "repo": "saile515/blog",
+        "date": "2022-02-15T08:59:57Z"
+    },
+    {
         "sha": "7bad4020b034a2908d27a1134aade9d39363b2cd",
         "author": "saile515",
         "message": "Added title (name temporary)",
@@ -277,14 +286,5 @@
         "url": "https://www.github.com/saile515/blog/commit/55934b56f03757060ee4e003ddbba6818def8066",
         "repo": "saile515/blog",
         "date": "2022-02-08T17:43:23Z"
-    },
-    {
-        "sha": "9e178117caa25a68841543a3f6f3cb8c90563e3d",
-        "author": "saile515",
-        "message": "Code highlighting",
-        "distinct": true,
-        "url": "https://www.github.com/saile515/blog/commit/9e178117caa25a68841543a3f6f3cb8c90563e3d",
-        "repo": "saile515/blog",
-        "date": "2022-02-08T17:33:53Z"
     }
 ]
