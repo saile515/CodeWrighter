@@ -45,27 +45,31 @@ interface GithubEvent {
 }
 
 export async function fetchCommits(): Promise<Commit[]> {
-	return fetch(`https://api.github.com/users/${process.env.GITHUB}/events`)
-		.then((data) => {
-			return data.json() as Promise<GithubEvent[]>;
-		})
-		.then((data) => {
-			const commits = [];
-			for (const event in data) {
-				if (data[event].type != "PushEvent") continue;
+	try {
+		return fetch(`https://api.github.com/users/${process.env.GITHUB}/events`)
+			.then((data) => {
+				return data.json() as Promise<GithubEvent[]>;
+			})
+			.then((data) => {
+				const commits = [];
+				for (const event in data) {
+					if (data[event].type != "PushEvent") continue;
 
-				for (const commitIndex in data[event].payload.commits) {
-					if ((data[event].payload.commits[commitIndex].author as { name: string; email: string }).name != process.env.GITHUB) continue;
-					const commit = data[event].payload.commits[commitIndex];
-					commit.author = (commit.author as { name: string; email: string }).name;
-					commit.repo = data[event].repo.name;
-					commit.date = data[event].created_at;
-					commit.url = `https://www.github.com/${commit.repo}/commit/${commit.sha}`;
-					commits.push(commit);
+					for (const commitIndex in data[event].payload.commits) {
+						if ((data[event].payload.commits[commitIndex].author as { name: string; email: string }).name != process.env.GITHUB) continue;
+						const commit = data[event].payload.commits[commitIndex];
+						commit.author = (commit.author as { name: string; email: string }).name;
+						commit.repo = data[event].repo.name;
+						commit.date = data[event].created_at;
+						commit.url = `https://www.github.com/${commit.repo}/commit/${commit.sha}`;
+						commits.push(commit);
+					}
 				}
-			}
-			return commits;
-		});
+				return commits;
+			});
+	} catch (err) {
+		console.log("Failed to fetch commits!");
+	}
 }
 
 export function fetchData(): void {

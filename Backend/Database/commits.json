@@ -1,5 +1,14 @@
 [
     {
+        "sha": "7bad4020b034a2908d27a1134aade9d39363b2cd",
+        "author": "saile515",
+        "message": "Added title (name temporary)",
+        "distinct": true,
+        "url": "https://www.github.com/saile515/blog/commit/7bad4020b034a2908d27a1134aade9d39363b2cd",
+        "repo": "saile515/blog",
+        "date": "2022-02-14T19:40:01Z"
+    },
+    {
         "sha": "a1e8e0c1917d77c4d75bbe5903959343e9c33db6",
         "author": "saile515",
         "message": "Added rel no referrer to offsite links",
@@ -277,32 +286,5 @@
         "url": "https://www.github.com/saile515/blog/commit/9e178117caa25a68841543a3f6f3cb8c90563e3d",
         "repo": "saile515/blog",
         "date": "2022-02-08T17:33:53Z"
-    },
-    {
-        "sha": "c0be0ed6280a925118d13edbfbdb526ce6b874c6",
-        "author": "saile515",
-        "message": "Removed .env from reposotory",
-        "distinct": true,
-        "url": "https://www.github.com/saile515/blog/commit/c0be0ed6280a925118d13edbfbdb526ce6b874c6",
-        "repo": "saile515/blog",
-        "date": "2022-02-08T12:57:20Z"
-    },
-    {
-        "sha": "1dd0ff58102054aeec2b629cf9484c8d59349194",
-        "author": "saile515",
-        "message": "Removed database data from git",
-        "distinct": true,
-        "url": "https://www.github.com/saile515/blog/commit/1dd0ff58102054aeec2b629cf9484c8d59349194",
-        "repo": "saile515/blog",
-        "date": "2022-02-08T12:57:20Z"
-    },
-    {
-        "sha": "107804cfad113e4c9d37ca173fa961a5ba9f48e5",
-        "author": "saile515",
-        "message": "Search bar (front end)",
-        "distinct": true,
-        "url": "https://www.github.com/saile515/blog/commit/107804cfad113e4c9d37ca173fa961a5ba9f48e5",
-        "repo": "saile515/blog",
-        "date": "2022-02-08T12:57:20Z"
     }
 ]
