@@ -1,4 +1,4 @@
-# Blog
+# CodeWrighter
 ## *My personal programming blog.*
 
-*Under development.*
+[CodeWrighter](https://www.codewrighter.com)
