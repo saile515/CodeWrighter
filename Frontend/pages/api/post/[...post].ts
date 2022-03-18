@@ -1,6 +1,7 @@
 import "dotenv/config";
 
 import { NextApiRequest, NextApiResponse } from "next";
+import fetch from "node-fetch";
 
 import fs from "fs";
 
