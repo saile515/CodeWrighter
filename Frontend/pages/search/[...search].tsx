@@ -1,9 +1,9 @@
 import { ReactElement, useEffect, useState } from "react";
 
 import { NextPage } from "next";
-import { PostData } from "../../Components/PostBrowser";
-import PostTile from "../../Components/PostTile";
-import SideMenu from "../../Components/SideMenu";
+import { PostData } from "../../components/PostBrowser";
+import PostTile from "../../components/PostTile";
+import SideMenu from "../../components/SideMenu";
 import styles from "../../styles/Search.module.css";
 import { useRouter } from "next/router";
 

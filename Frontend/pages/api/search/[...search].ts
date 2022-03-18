@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-import { PostData } from "../../../Components/PostBrowser";
+import { PostData } from "../../../components/PostBrowser";
 import fs from "fs";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
-import PostBrowser from "../Components/PostBrowser";
-import SideMenu from "../Components/SideMenu";
+import PostBrowser from "../components/PostBrowser";
+import SideMenu from "../components/SideMenu";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {

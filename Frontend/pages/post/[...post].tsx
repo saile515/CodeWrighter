@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 
-import Blogpost from "../../Components/Blogpost";
+import Blogpost from "../../components/Blogpost";
 import type { NextPage } from "next";
-import SideMenu from "../../Components/SideMenu";
-import TableOfContents from "../../Components/TableOfContents";
+import SideMenu from "../../components/SideMenu";
+import TableOfContents from "../../components/TableOfContents";
 import styles from "../../styles/Post.module.css";
 import { useRouter } from "next/router";
 

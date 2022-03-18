@@ -1,5 +1,41 @@
 [
     {
+        "sha": "028b1c011468fde9a382294994e8d9d2cccac64c",
+        "author": "saile515",
+        "message": "Fixed tailwind production issue (hopefully)",
+        "distinct": true,
+        "url": "https://www.github.com/saile515/blog/commit/028b1c011468fde9a382294994e8d9d2cccac64c",
+        "repo": "saile515/blog",
+        "date": "2022-02-15T10:16:45Z"
+    },
+    {
+        "sha": "586c9577a1bb70202d8d6e0c0766fdd1db374e05",
+        "author": "saile515",
+        "message": "Changed tailwind to important",
+        "distinct": true,
+        "url": "https://www.github.com/saile515/blog/commit/586c9577a1bb70202d8d6e0c0766fdd1db374e05",
+        "repo": "saile515/blog",
+        "date": "2022-02-15T10:00:36Z"
+    },
+    {
+        "sha": "dba520c91473232613b31a8e76ba2de759bba28c",
+        "author": "saile515",
+        "message": "Moved frontend to seperate subdir",
+        "distinct": true,
+        "url": "https://www.github.com/saile515/blog/commit/dba520c91473232613b31a8e76ba2de759bba28c",
+        "repo": "saile515/blog",
+        "date": "2022-02-15T09:46:53Z"
+    },
+    {
+        "sha": "6fb14aea561ec1ee6efea73915f49f9e9538823d",
+        "author": "saile515",
+        "message": "Moved frontend to seperate subdir",
+        "distinct": true,
+        "url": "https://www.github.com/saile515/blog/commit/6fb14aea561ec1ee6efea73915f49f9e9538823d",
+        "repo": "saile515/blog",
+        "date": "2022-02-15T09:46:12Z"
+    },
+    {
         "sha": "0fc089ed40b1385eed19538ed789ef4c2678d8ef",
         "author": "saile515",
         "message": "Changed title + maybe fixed backend crashing",
@@ -250,41 +286,5 @@
         "url": "https://www.github.com/saile515/blog/commit/c85b2c42d1a41d14ea1a299c8597eb9660947b67",
         "repo": "saile515/blog",
         "date": "2022-02-09T13:43:12Z"
-    },
-    {
-        "sha": "d52cb35d60defcf4ca2831c36de23dafb3323baf",
-        "author": "saile515",
-        "message": "Search + sort",
-        "distinct": true,
-        "url": "https://www.github.com/saile515/blog/commit/d52cb35d60defcf4ca2831c36de23dafb3323baf",
-        "repo": "saile515/blog",
-        "date": "2022-02-09T11:31:06Z"
-    },
-    {
-        "sha": "11730c7b2b88d356f68a3e251cefe9ac7d44147a",
-        "author": "saile515",
-        "message": "Reversed post array to display recent posts",
-        "distinct": true,
-        "url": "https://www.github.com/saile515/blog/commit/11730c7b2b88d356f68a3e251cefe9ac7d44147a",
-        "repo": "saile515/blog",
-        "date": "2022-02-08T18:00:28Z"
-    },
-    {
-        "sha": "f62e65475ab7e5591a80a78d7874532f8f871982",
-        "author": "saile515",
-        "message": "Limited posts in navigation to 3",
-        "distinct": true,
-        "url": "https://www.github.com/saile515/blog/commit/f62e65475ab7e5591a80a78d7874532f8f871982",
-        "repo": "saile515/blog",
-        "date": "2022-02-08T17:52:22Z"
-    },
-    {
-        "sha": "55934b56f03757060ee4e003ddbba6818def8066",
-        "author": "saile515",
-        "message": "Moved markdown posts to database",
-        "distinct": true,
-        "url": "https://www.github.com/saile515/blog/commit/55934b56f03757060ee4e003ddbba6818def8066",
-        "repo": "saile515/blog",
-        "date": "2022-02-08T17:43:23Z"
     }
 ]
